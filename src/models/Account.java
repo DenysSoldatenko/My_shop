@@ -1,105 +1,97 @@
 package models;
 
+import datastorages.SaveData;
 import exceptions.ModelException;
 import java.util.List;
-import java.util.Objects;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
+@EqualsAndHashCode(exclude = {
+  "currency",
+  "startAmount",
+  "amount"
+}, callSuper = false)
 public final class Account extends Common {
-	private String title;
-	private Currency currency;
-	private double startAmount;
-	private double amount;
+  private String title;
+  private Currency currency;
+  private double startAmount;
+  private double amount;
 
-	public Account(
-		final String accountTitle,
-		final Currency cur,
-		final double startAmt
-	) throws ModelException {
-		if (accountTitle.length() == 0) {
-			throw new ModelException(ModelException.TITLE_EMPTY);
-		}
-		if (cur == null) {
-			throw new ModelException(ModelException.CURRENCY_EMPTY);
-		}
-		this.title = accountTitle;
-		this.currency = cur;
-		this.startAmount = startAmt;
-	}
+  public Account(
+       final String title,
+       final Currency currency,
+       final double startAmount
+  ) throws ModelException {
+    if (title.length() == 0) {
+      throw new ModelException(ModelException.TITLE_EMPTY);
+    }
+    if (currency == null) {
+      throw new ModelException(ModelException.CURRENCY_EMPTY);
+    }
+    this.title = title;
+    this.currency = currency;
+    this.startAmount = startAmount;
+  }
 
-	public double getAmount() {
-		return amount;
-	}
+  public void setAmountFromTransactionsAndTransfers(
+      final List<Transaction> transactions,
+      final List<Transfer> transfers
+  ) {
+    this.amount = startAmount;
+    for (Transaction transaction : transactions) {
+      if (transaction.getAccount().equals(this)) {
+        this.amount += transaction.getAmount();
+      }
+    }
 
-	public String getTitle() {
-		return title;
-	}
+    for (Transfer transfer : transfers) {
+      if (transfer.getFromAccount().equals(this)) {
+        this.amount -= transfer.getFromAmount();
+      }
+      if (transfer.getToAccount().equals(this)) {
+        this.amount += transfer.getToAmount();
+      }
+    }
+  }
 
-	public void setTitle(final String newTitle) {
-		this.title = newTitle;
-	}
+  @Override
+  public void postAdd(final SaveData sd) {
+    setAmountFromTransactionsAndTransfers(
+        sd.getTransactions(),
+        sd.getTransfers()
+    );
+  }
 
-	public Currency getCurrency() {
-		return currency;
-	}
+  @Override
+  public void postEdit(final SaveData sd) {
+    for (Transaction t : sd.getTransactions()) {
+      if (t.getAccount().equals(sd.getOldCommon())) {
+        t.setAccount(this);
+      }
+    }
+    for (Transfer t : sd.getTransfers()) {
+      if (t.getFromAccount().equals(sd.getOldCommon())) {
+        t.setFromAccount(this);
+      }
+      if (t.getToAccount().equals(sd.getOldCommon())) {
+        t.setToAccount(this);
+      }
+    }
+    setAmountFromTransactionsAndTransfers(
+        sd.getTransactions(),
+        sd.getTransfers()
+    );
+  }
 
-	public void setCurrency(final Currency newCurrency) {
-		this.currency = newCurrency;
-	}
-
-	public double getStartAmount() {
-		return startAmount;
-	}
-
-	public void setStartAmount(final double newStartAmount) {
-		this.startAmount = newStartAmount;
-	}
-	public void setAmountFromTransactionsAndTransfers(
-		final List<Transaction> transactions,
-		final List<Transfer> transfers
-	) {
-		this.amount = startAmount;
-		for (Transaction transaction : transactions) {
-			if (transaction.getAccount().equals(this)) {
-				this.amount += transaction.getAmount();
-			}
-		}
-
-		for (Transfer transfer : transfers) {
-			if (transfer.getFromAccount().equals(this)) {
-				this.amount -= transfer.getFromAmount();
-			}
-			if (transfer.getToAccount().equals(this)) {
-				this.amount += transfer.getToAmount();
-			}
-		}
-	}
-
-	@Override
-	public boolean equals(final Object o) {
-		if (this == o) {
-			return true;
-		}
-		if (o == null || getClass() != o.getClass()) {
-			return false;
-		}
-		Account account = (Account) o;
-		return Objects.equals(title, account.title);
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(title);
-	}
-
-	@Override
-	public String getValueFromComboBox() {
-		return title;
-	}
-
-	@Override
-	public String toString() {
-		return "Account{" + "title=" + title + ", currency="
-			+ currency + ", startAmount=" + startAmount
-			+ ", amount=" + amount + '}';
-	}
+  @Override
+  public String getValueFromComboBox() {
+    return title;
+  }
 }

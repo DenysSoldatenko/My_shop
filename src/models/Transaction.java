@@ -1,102 +1,95 @@
 package models;
 
+import datastorages.SaveData;
 import exceptions.ModelException;
 import java.util.Date;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
 public final class Transaction extends Common {
 
-	private Account account;
-	private Article article;
-	private double amount;
-	private String notice;
-	private Date date;
+  private Account account;
+  private Article article;
+  private double amount;
+  private String notice;
+  private Date date;
 
-	public Transaction(
-		final Account acc,
-		final Article art,
-		final double amt,
-		final String note,
-		final Date transDate
-	) throws ModelException {
-		if (acc == null) {
-			throw new ModelException(ModelException.ACCOUNT_EMPTY);
-		}
-		if (art == null) {
-			throw new ModelException(ModelException.ARTICLE_EMPTY);
-		}
-		if (transDate == null) {
-			throw new ModelException(ModelException.DATE_FORMAT);
-		}
-		this.account = acc;
-		this.article = art;
-		this.amount = amt;
-		this.notice = note;
-		this.date = transDate;
-	}
+  public Transaction(
+      final Account account,
+      final Article article,
+      final double amount,
+      final String notice,
+      final Date date
+  ) throws ModelException {
+    if (account == null) {
+      throw new ModelException(ModelException.ACCOUNT_EMPTY);
+    }
+    if (article == null) {
+      throw new ModelException(ModelException.ARTICLE_EMPTY);
+    }
+    if (date == null) {
+      throw new ModelException(ModelException.DATE_FORMAT);
+    }
+    this.account = account;
+    this.article = article;
+    this.amount = amount;
+    this.notice = notice;
+    this.date = date;
+  }
 
-	public Transaction(
-		final Account acc,
-		final Article art,
-		final double amt,
-		final String note
-	) throws ModelException {
-		this(acc, art, amt, note, new Date());
-	}
+  public Transaction(
+      final Account account,
+      final Article article,
+      final double amount,
+      final String notice
+  ) throws ModelException {
+    this(account, article, amount, notice, new Date());
+  }
 
-	public Transaction(
-		final Account acc,
-		final Article art,
-		final double amt,
-		final Date transDate
-	) throws ModelException {
-		this(acc, art, amt, "", transDate);
-	}
+  public Transaction(
+      final Account account,
+      final Article article,
+      final double amount,
+      final Date date
+  ) throws ModelException {
+    this(account, article, amount, "", date);
+  }
 
-	public Transaction(
-		final Account acc,
-		final Article art,
-		final double amt
-	) throws ModelException {
-		this(acc, art, amt, "", new Date());
-	}
+  public Transaction(
+      final Account account,
+      final Article article,
+      final double amount
+  ) throws ModelException {
+    this(account, article, amount, "", new Date());
+  }
 
-	public Account getAccount() {
-		return account;
-	}
+  private void setAmounts(SaveData sd) {
+    for (Account a : sd.getAccounts()) {
+      a.setAmountFromTransactionsAndTransfers(
+          sd.getTransactions(),
+          sd.getTransfers()
+      );
+    }
+  }
 
-	public void setAccount(final Account acc) {
-		this.account = acc;
-	}
+  @Override
+  public void postAdd(SaveData sd) {
+    setAmounts(sd);
+  }
 
-	public Article getArticle() {
-		return article;
-	}
+  @Override
+  public void postEdit(SaveData sd) {
+    setAmounts(sd);
+  }
 
-	public void setArticle(final Article art) {
-		this.article = art;
-	}
-
-	public double getAmount() {
-		return amount;
-	}
-
-	public void setAmount(final double amt) {
-		this.amount = amt;
-	}
-
-	public String getNotice() {
-		return notice;
-	}
-
-	public void setNotice(final String newNotice) {
-		this.notice = newNotice;
-	}
-
-	public Date getDate() {
-		return date;
-	}
-
-	public void setDate(final Date newDate) {
-		this.date = newDate;
-	}
+  @Override
+  public void postRemove(SaveData sd) {
+    setAmounts(sd);
+  }
 }

@@ -1,111 +1,104 @@
 package models;
 
+import datastorages.SaveData;
 import exceptions.ModelException;
-import java.util.Objects;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
+@EqualsAndHashCode(exclude = {
+  "title",
+  "rate",
+  "on",
+  "base"
+}, callSuper = false)
 public final class Currency extends Common {
-	private String title;
-	private String code;
-	private double rate;
-	private boolean on;
-	private boolean base;
+  private String title;
+  private String code;
+  private double rate;
+  private boolean on;
+  private boolean base;
 
-	public Currency(
-		final String currencyTitle,
-		final String currencyCode,
-		final double currencyRate,
-		final boolean currencyOn,
-		final boolean currencyBase
-	) throws ModelException {
-		if (currencyTitle.length() == 0) {
-			throw new ModelException(ModelException.TITLE_EMPTY);
-		}
-		if (currencyCode.length() == 0) {
-			throw new ModelException(ModelException.CODE_EMPTY);
-		}
-		if (currencyRate <= 0) {
-			throw new ModelException(ModelException.RATE_INCORRECT);
-		}
-		this.title = currencyTitle;
-		this.code = currencyCode;
-		this.rate = currencyRate;
-		this.on = currencyOn;
-		this.base = currencyBase;
-	}
+  public Currency(
+      final String title,
+      final String code,
+      final double rate,
+      final boolean on,
+      final boolean base
+  ) throws ModelException {
+    if (title.length() == 0) {
+      throw new ModelException(ModelException.TITLE_EMPTY);
+    }
+    if (code.length() == 0) {
+      throw new ModelException(ModelException.CODE_EMPTY);
+    }
+    if (rate <= 0) {
+      throw new ModelException(ModelException.RATE_INCORRECT);
+    }
+    this.title = title;
+    this.code = code;
+    this.rate = rate;
+    this.on = on;
+    this.base = base;
+  }
 
-	public Currency() { }
+  public double getRateByCurrency(final Currency currency) {
+    return rate / currency.rate;
+  }
 
-	public String getTitle() {
-		return title;
-	}
+  private void clearBase(SaveData sd) {
+    if (base) {
+      rate = 1;
+      Currency old = (Currency) sd.getOldCommon();
+      for (Currency c : sd.getCurrencies()) {
+        if (!this.equals(c)) {
+          c.setBase(false);
+          if (old != null) {
+            c.setRate(c.rate / old.rate);
+          }
+        }
+      }
+    }
+  }
 
-	public void setTitle(final String newTitle) {
-		this.title = newTitle;
-	}
+  @Override
+  public String getValueFromComboBox() {
+    return title;
+  }
 
-	public String getCode() {
-		return code;
-	}
+  @Override
+  public void postAdd(SaveData sd) {
+    clearBase(sd);
+  }
 
-	public void setCode(final String newCode) {
-		this.code = newCode;
-	}
-
-	public double getRate() {
-		return rate;
-	}
-
-	public void setRate(final double newRate) {
-		this.rate = newRate;
-	}
-
-	public boolean isOn() {
-		return on;
-	}
-
-	public void setOn(final boolean newOn) {
-		this.on = newOn;
-	}
-
-	public boolean isBase() {
-		return base;
-	}
-
-	public void setBase(final boolean newBase) {
-		this.base = newBase;
-	}
-
-	@Override
-	public String toString() {
-		return "Currency{" + "title=" + title
-			+ ", code=" + code + ", rate="
-			+ rate + ", isOn=" + on + ", isBase=" + base + '}';
-	}
-
-	@Override
-	public boolean equals(final Object o) {
-		if (this == o) {
-			return true;
-		}
-		if (o == null || getClass() != o.getClass()) {
-			return false;
-		}
-		Currency currency = (Currency) o;
-		return Objects.equals(code, currency.code);
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(code);
-	}
-
-	@Override
-	public String getValueFromComboBox() {
-		return title;
-	}
-
-	public double getRateByCurrency(final Currency currency) {
-		return rate / currency.rate;
-	}
+  @Override
+  public void postEdit(SaveData sd) {
+    clearBase(sd);
+    for (Currency currency : sd.getCurrencies()) {
+      for (Account account : sd.getAccounts()) {
+        if (account.getCurrency().equals(currency)) {
+          account.setCurrency(currency);
+        }
+      }
+      for (Transaction transaction : sd.getTransactions()) {
+        if (transaction.getAccount().getCurrency().equals(currency)) {
+          transaction.getAccount().setCurrency(currency);
+        }
+      }
+      for (Transfer transfer : sd.getTransfers()) {
+        if (transfer.getFromAccount().getCurrency().equals(currency)) {
+          transfer.getFromAccount().setCurrency(currency);
+        }
+        if (transfer.getToAccount().getCurrency().equals(currency)) {
+          transfer.getToAccount().setCurrency(currency);
+        }
+      }
+    }
+  }
 }
-

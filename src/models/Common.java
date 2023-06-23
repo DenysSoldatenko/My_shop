@@ -1,11 +1,20 @@
 package models;
 
-abstract class Common {
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import datastorages.SaveData;
+import lombok.NoArgsConstructor;
 
-	public String getValueFromComboBox() {
-		return null;
-	}
-	public void postAdd() { }
-	public void postEdit() { }
-	public void postRemove() { }
+@NoArgsConstructor
+public abstract class Common {
+
+  @JsonIgnore
+  public String getValueFromComboBox() {
+    return null;
+  }
+
+  public void postAdd(SaveData saveData) { }
+
+  public void postEdit(SaveData saveData) { }
+
+  public void postRemove(SaveData saveData) { }
 }

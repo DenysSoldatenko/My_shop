@@ -1,0 +1,1245 @@
+{
+  "articles" : [ {
+    "title" : "Відсотки за депозитом"
+  }, {
+    "title" : "Зарплата"
+  }, {
+    "title" : "Продукти"
+  } ],
+  "accounts" : [ {
+    "title" : "Гаманець",
+    "currency" : {
+      "title" : "Гривня",
+      "code" : "UAH",
+      "rate" : 1.0,
+      "on" : true,
+      "base" : true
+    },
+    "startAmount" : 1000.0,
+    "amount" : 5298.0
+  }, {
+    "title" : "Депозит у банку (EUR)",
+    "currency" : {
+      "title" : "Євро",
+      "code" : "EUR",
+      "rate" : 40.1852,
+      "on" : false,
+      "base" : false
+    },
+    "startAmount" : 100000.0,
+    "amount" : 105000.0
+  }, {
+    "title" : "Депозит у банку (USD)",
+    "currency" : {
+      "title" : "Долар",
+      "code" : "USD",
+      "rate" : 36.5686,
+      "on" : true,
+      "base" : false
+    },
+    "startAmount" : 0.0,
+    "amount" : 90.0
+  }, {
+    "title" : "Карта Visa",
+    "currency" : {
+      "title" : "Долар",
+      "code" : "USD",
+      "rate" : 36.5686,
+      "on" : true,
+      "base" : false
+    },
+    "startAmount" : 0.0,
+    "amount" : 7169.0
+  } ],
+  "transactions" : [ {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Зарплата"
+    },
+    "amount" : 30000.0,
+    "notice" : "",
+    "date" : "2023-06-23T13:20:45.455+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -1500.0,
+    "notice" : "На вихідні",
+    "date" : "2023-06-23T13:20:45.455+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -5500.0,
+    "notice" : "Квартира",
+    "date" : "2023-06-23T13:20:45.455+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -4000.0,
+    "notice" : "Розваги",
+    "date" : "2023-06-23T13:20:45.455+00:00"
+  }, {
+    "account" : {
+      "title" : "Депозит у банку (EUR)",
+      "currency" : {
+        "title" : "Євро",
+        "code" : "EUR",
+        "rate" : 40.0,
+        "on" : false,
+        "base" : false
+      },
+      "startAmount" : 100000.0,
+      "amount" : 105000.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : 1000.0,
+    "notice" : "",
+    "date" : "2023-06-23T13:20:45.455+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -157.0,
+    "notice" : "",
+    "date" : "2023-06-23T06:40:44.158+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -188.0,
+    "notice" : "",
+    "date" : "2023-06-22T19:10:22.175+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -548.0,
+    "notice" : "",
+    "date" : "2023-06-21T12:12:03.701+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -11.0,
+    "notice" : "",
+    "date" : "2023-06-19T19:15:48.991+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -167.0,
+    "notice" : "",
+    "date" : "2023-06-19T05:42:05.112+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -11.0,
+    "notice" : "",
+    "date" : "2023-06-19T02:32:48.759+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -863.0,
+    "notice" : "",
+    "date" : "2023-06-19T01:15:45.444+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -13.0,
+    "notice" : "",
+    "date" : "2023-06-18T17:47:44.148+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -489.0,
+    "notice" : "",
+    "date" : "2023-06-18T03:16:05.520+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -797.0,
+    "notice" : "",
+    "date" : "2023-06-16T15:52:38.702+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -591.0,
+    "notice" : "",
+    "date" : "2023-06-15T13:48:06.249+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -102.0,
+    "notice" : "",
+    "date" : "2023-06-15T09:36:58.829+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -401.0,
+    "notice" : "",
+    "date" : "2023-06-14T13:14:07.114+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -154.0,
+    "notice" : "",
+    "date" : "2023-06-14T06:35:33.512+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -485.0,
+    "notice" : "",
+    "date" : "2023-06-13T18:46:19.500+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -627.0,
+    "notice" : "",
+    "date" : "2023-06-13T17:47:56.404+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -862.0,
+    "notice" : "",
+    "date" : "2023-06-13T02:15:08.228+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -873.0,
+    "notice" : "",
+    "date" : "2023-06-12T02:31:07.163+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -679.0,
+    "notice" : "",
+    "date" : "2023-06-11T21:09:40.965+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -453.0,
+    "notice" : "",
+    "date" : "2023-06-09T20:08:03.801+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -443.0,
+    "notice" : "",
+    "date" : "2023-06-09T10:17:59.467+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -698.0,
+    "notice" : "",
+    "date" : "2023-06-09T08:33:24.267+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -247.0,
+    "notice" : "",
+    "date" : "2023-06-09T01:54:21.016+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -702.0,
+    "notice" : "",
+    "date" : "2023-06-08T21:00:18.721+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -256.0,
+    "notice" : "",
+    "date" : "2023-06-07T22:43:04.405+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -206.0,
+    "notice" : "",
+    "date" : "2023-06-07T22:32:08.262+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -339.0,
+    "notice" : "",
+    "date" : "2023-06-07T21:54:20.081+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -515.0,
+    "notice" : "",
+    "date" : "2023-06-07T16:05:11.154+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -348.0,
+    "notice" : "",
+    "date" : "2023-06-06T22:48:06.234+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -848.0,
+    "notice" : "",
+    "date" : "2023-06-06T15:39:34.331+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -953.0,
+    "notice" : "",
+    "date" : "2023-06-06T08:25:39.117+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -639.0,
+    "notice" : "",
+    "date" : "2023-06-05T19:48:24.804+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -405.0,
+    "notice" : "",
+    "date" : "2023-06-05T14:18:29.405+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -387.0,
+    "notice" : "",
+    "date" : "2023-06-04T18:01:47.134+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -772.0,
+    "notice" : "",
+    "date" : "2023-06-03T15:08:38.658+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -52.0,
+    "notice" : "",
+    "date" : "2023-06-03T07:26:36.252+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -97.0,
+    "notice" : "",
+    "date" : "2023-06-03T04:34:44.010+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -347.0,
+    "notice" : "",
+    "date" : "2023-06-02T23:46:56.690+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -622.0,
+    "notice" : "",
+    "date" : "2023-06-02T09:11:20.656+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -725.0,
+    "notice" : "",
+    "date" : "2023-05-31T03:25:12.058+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -100.0,
+    "notice" : "",
+    "date" : "2023-05-29T11:12:34.561+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -937.0,
+    "notice" : "",
+    "date" : "2023-05-29T07:33:14.622+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -282.0,
+    "notice" : "",
+    "date" : "2023-05-28T21:40:04.934+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -835.0,
+    "notice" : "",
+    "date" : "2023-05-27T08:38:59.419+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -586.0,
+    "notice" : "",
+    "date" : "2023-05-27T08:01:00.275+00:00"
+  }, {
+    "account" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -248.0,
+    "notice" : "",
+    "date" : "2023-05-26T12:18:25.427+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -692.0,
+    "notice" : "",
+    "date" : "2023-05-26T00:57:08.489+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -362.0,
+    "notice" : "",
+    "date" : "2023-05-25T17:18:50.388+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Відсотки за депозитом"
+    },
+    "amount" : -507.0,
+    "notice" : "",
+    "date" : "2023-05-24T18:19:05.104+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : -912.0,
+    "notice" : "",
+    "date" : "2023-05-24T16:11:39.963+00:00"
+  }, {
+    "account" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "article" : {
+      "title" : "Зарплата"
+    },
+    "amount" : 25000.0,
+    "notice" : "",
+    "date" : "2023-05-24T13:20:45.455+00:00"
+  }, {
+    "account" : {
+      "title" : "Депозит у банку (EUR)",
+      "currency" : {
+        "title" : "Євро",
+        "code" : "EUR",
+        "rate" : 40.0,
+        "on" : false,
+        "base" : false
+      },
+      "startAmount" : 100000.0,
+      "amount" : 105000.0
+    },
+    "article" : {
+      "title" : "Продукти"
+    },
+    "amount" : 1000.0,
+    "notice" : "",
+    "date" : "2023-05-24T13:20:45.455+00:00"
+  } ],
+  "transfers" : [ {
+    "fromAccount" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "toAccount" : {
+      "title" : "Гаманець",
+      "currency" : {
+        "title" : "Гривня",
+        "code" : "UAH",
+        "rate" : 1.0,
+        "on" : true,
+        "base" : true
+      },
+      "startAmount" : 1000.0,
+      "amount" : 5298.0
+    },
+    "fromAmount" : 25000.0,
+    "toAmount" : 25000.0,
+    "notice" : "",
+    "date" : "2023-06-23T13:20:45.455+00:00"
+  }, {
+    "fromAccount" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "toAccount" : {
+      "title" : "Депозит у банку (EUR)",
+      "currency" : {
+        "title" : "Євро",
+        "code" : "EUR",
+        "rate" : 40.0,
+        "on" : false,
+        "base" : false
+      },
+      "startAmount" : 100000.0,
+      "amount" : 105000.0
+    },
+    "fromAmount" : 3000.0,
+    "toAmount" : 3000.0,
+    "notice" : "",
+    "date" : "2023-06-23T13:20:45.455+00:00"
+  }, {
+    "fromAccount" : {
+      "title" : "Карта Visa",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 7169.0
+    },
+    "toAccount" : {
+      "title" : "Депозит у банку (USD)",
+      "currency" : {
+        "title" : "Долар",
+        "code" : "USD",
+        "rate" : 36.0,
+        "on" : true,
+        "base" : false
+      },
+      "startAmount" : 0.0,
+      "amount" : 90.0
+    },
+    "fromAmount" : 6000.0,
+    "toAmount" : 90.0,
+    "notice" : "",
+    "date" : "2023-06-23T13:20:45.455+00:00"
+  } ],
+  "currencies" : [ {
+    "title" : "Гривня",
+    "code" : "UAH",
+    "rate" : 1.0,
+    "on" : true,
+    "base" : true
+  }, {
+    "title" : "Долар",
+    "code" : "USD",
+    "rate" : 36.5686,
+    "on" : true,
+    "base" : false
+  }, {
+    "title" : "Євро",
+    "code" : "EUR",
+    "rate" : 40.1852,
+    "on" : false,
+    "base" : false
+  } ]
+}
