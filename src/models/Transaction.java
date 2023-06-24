@@ -1,13 +1,16 @@
 package models;
 
 import datastorages.SaveData;
-import exceptions.ModelException;
 import java.util.Date;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import settings.exceptions.ModelException;
 
+/**
+ * Represents a transaction in the application.
+ */
 @Getter
 @Setter
 @ToString
@@ -20,6 +23,16 @@ public final class Transaction extends Common {
   private String notice;
   private Date date;
 
+  /**
+   * Constructs a new Transaction with the specified account, article, amount, notice, and date.
+   *
+   * @param account the account associated with the transaction
+   * @param article the article associated with the transaction
+   * @param amount the amount of the transaction
+   * @param notice the notice or description of the transaction
+   * @param date the date of the transaction
+   * @throws ModelException if the account is null, article is null, or the date is null
+   */
   public Transaction(
       final Account account,
       final Article article,

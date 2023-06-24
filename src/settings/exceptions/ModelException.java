@@ -1,9 +1,12 @@
-package exceptions;
+package settings.exceptions;
 
 import java.util.HashMap;
 import java.util.Map;
 import settings.Text;
 
+/**
+ * The ModelException class represents an exception specific to the application's models.
+ */
 public class ModelException extends Exception {
   public static final int TITLE_EMPTY = 1;
   public static final int IS_EXISTS = 2;

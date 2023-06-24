@@ -1,12 +1,15 @@
 package models;
 
-import exceptions.ModelException;
 import java.util.Date;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import settings.exceptions.ModelException;
 
+/**
+ * Represents a transfer between two accounts.
+ */
 @Getter
 @Setter
 @ToString
@@ -19,6 +22,17 @@ public final class Transfer extends Common {
   private String notice;
   private Date date;
 
+  /**
+   * Constructs a transfer with the specified parameters.
+   *
+   * @param fromAccount the account from which the amount is transferred
+   * @param toAccount the account to which the amount is transferred
+   * @param fromAmount the amount transferred from the fromAmount
+   * @param toAmount the amount transferred to the toAccount
+   * @param notice the notice or description of the transfer
+   * @param date the date of the transfer
+   * @throws ModelException if any of the parameters are invalid
+   */
   public Transfer(
       final Account fromAccount,
       final Account toAccount,

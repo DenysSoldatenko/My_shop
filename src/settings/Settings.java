@@ -12,9 +12,13 @@ import org.ini4j.Ini;
 import org.ini4j.IniPreferences;
 import org.ini4j.Wini;
 
+/**
+ * The Settings class manages the application settings and configurations.
+ */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class Settings {
 
+  public static final File FONT_ROBOTO_LIGHT = new File("src/gui/fonts/Roboto-Light.ttf");
   public static final File SAVE_DIR = new File("src/configurations/");
   public static final String SAVE_FILE_EXT = "vap";
   public static final String FORMAT_AMOUNT = "%.2f";
@@ -34,6 +38,10 @@ public final class Settings {
   private static File FILE_SAVE
       = new File("src/configurations/default.json");
 
+  /**
+   * Initializes the settings by reading from the settings.ini file.
+   * If the file does not exist, it creates a new one and saves the default settings.
+   */
   public static void init() {
     try {
       Ini ini = new Ini(FILE_SETTINGS);
@@ -59,7 +67,7 @@ public final class Settings {
   }
 
   private static void setLocale() {
-    Locale.setDefault(new Locale("uk_UA"));
+    Locale.setDefault(new Locale("uk"));
   }
 
   private static void save() {

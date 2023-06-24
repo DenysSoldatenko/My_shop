@@ -1,31 +1,36 @@
 import datastorages.SaveData;
-import exceptions.ModelException;
+
+import gui.MainFrame;
+import models.*;
+import settings.Settings;
+import settings.Text;
+import settings.exceptions.ModelException;
+import java.awt.Font;
+import java.awt.FontFormatException;
+import java.awt.GraphicsEnvironment;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
-import models.Account;
-import models.Article;
-import models.Currency;
-import models.Transaction;
-import models.Transfer;
-import settings.Format;
-import settings.Text;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 public class Main {
   public static void main(String[] args) {
-    Text.init();
-    Date date = new GregorianCalendar(2023, Calendar.FEBRUARY, 11).getTime();
-    System.out.println(Format.date(date));
-    System.out.println(Text.get("PROGRAM_NAME"));
-    System.out.println(Arrays.toString(Text.getMonths()));
-    SaveData s = SaveData.getInstance();
-    System.out.println(s.getCurrencies());
-    s.updateCurrencies();
-    //s.save();
-    System.out.println(s.getCurrencies());
-    //testModels();
+    init();
+    MainFrame mainFrame = new MainFrame();
+  }
+
+  private static void init() {
+    try {
+      Settings.init();
+      Text.init();
+      GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+      ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, Settings.FONT_ROBOTO_LIGHT));
+    } catch (FontFormatException | IOException ex) {
+      Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+    }
   }
 
   private static void testModels() throws ModelException {

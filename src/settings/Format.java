@@ -8,6 +8,11 @@ import lombok.NoArgsConstructor;
 import models.Currency;
 import models.Filter;
 
+/**
+ * The Format class provides utility methods for formatting data values
+ * according to specific formats. It includes methods for formatting amounts, rates, dates,
+ * and other values used in the application.
+ */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class Format {
 
@@ -50,6 +55,12 @@ public final class Format {
     return Double.parseDouble(amount);
   }
 
+  /**
+   * Returns a localized "yes" or "no" string based on the specified boolean value.
+   *
+   * @param yes the boolean value.
+   * @return the localized "yes" or "no" string.
+   */
   public static String yesNo(final boolean yes) {
     if (yes) {
       return Text.get("YES");
@@ -58,6 +69,12 @@ public final class Format {
     }
   }
 
+  /**
+   * Returns the title for the filter based on the specified filter object.
+   *
+   * @param filter the filter object.
+   * @return the title for the filter.
+   */
   public static String getTitleFilter(final Filter filter) {
     Date time = filter.getTo();
     return switch (filter.getStep()) {

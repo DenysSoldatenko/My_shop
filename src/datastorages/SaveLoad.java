@@ -7,7 +7,16 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import settings.Settings;
 
+/**
+ * The SaveLoad class provides methods for loading and saving data using JSON serialization.
+ */
 public class SaveLoad {
+
+  /**
+   * Loads data from a JSON file and populates the provided SaveData object.
+   *
+   * @param saveData The SaveData object to populate with loaded data.
+   */
   public static void load(SaveData saveData) {
     try {
       ObjectMapper objectMapper = new ObjectMapper();
@@ -25,6 +34,11 @@ public class SaveLoad {
     }
   }
 
+  /**
+   * Saves the data from the provided SaveData object to a JSON file.
+   *
+   * @param saveData The SaveData object containing the data to be saved.
+   */
   public static void save(SaveData saveData) {
     try {
       ObjectMapper objectMapper = new ObjectMapper();

@@ -1,13 +1,16 @@
 package models;
 
 import datastorages.SaveData;
-import exceptions.ModelException;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import settings.exceptions.ModelException;
 
+/**
+ * Represents a currency in the application.
+ */
 @Getter
 @Setter
 @ToString
@@ -25,6 +28,16 @@ public final class Currency extends Common {
   private boolean on;
   private boolean base;
 
+  /**
+   * Constructs a currency with the specified parameters.
+   *
+   * @param title the title of the currency
+   * @param code the code of the currency
+   * @param rate the exchange rate of the currency
+   * @param on a flag indicating if the currency is active
+   * @param base a flag indicating if the currency is the base currency
+   * @throws ModelException if any of the parameters are invalid
+   */
   public Currency(
       final String title,
       final String code,

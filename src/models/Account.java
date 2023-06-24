@@ -1,14 +1,17 @@
 package models;
 
 import datastorages.SaveData;
-import exceptions.ModelException;
 import java.util.List;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import settings.exceptions.ModelException;
 
+/**
+ * Represents an account in the application.
+ */
 @Getter
 @Setter
 @ToString
@@ -24,6 +27,14 @@ public final class Account extends Common {
   private double startAmount;
   private double amount;
 
+  /**
+   * Constructs a new Account with the specified title, currency, and start amount.
+   *
+   * @param title       the title of the account
+   * @param currency    the currency associated with the account
+   * @param startAmount the initial amount of the account
+   * @throws ModelException if the title is empty or the currency is null
+   */
   public Account(
        final String title,
        final Currency currency,
@@ -40,6 +51,14 @@ public final class Account extends Common {
     this.startAmount = startAmount;
   }
 
+  /**
+   * Sets the amount of the account based on the provided list of transactions and transfers.
+   * The amount is calculated by summing the amounts of the transactions and adjusting for transfers
+   * where the account is involved.
+   *
+   * @param transactions the list of transactions
+   * @param transfers    the list of transfers
+   */
   public void setAmountFromTransactionsAndTransfers(
       final List<Transaction> transactions,
       final List<Transfer> transfers

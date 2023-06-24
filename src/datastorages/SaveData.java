@@ -1,6 +1,5 @@
 package datastorages;
 
-import exceptions.ModelException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -14,7 +13,13 @@ import models.Currency;
 import models.Filter;
 import models.Transaction;
 import models.Transfer;
+import settings.exceptions.ModelException;
 
+/**
+ * The SaveData class represents the data storage for the application.
+ * It holds lists of articles, currencies,accounts, transactions, and transfers.
+ * It provides methods for managing and manipulating the data.
+ */
 @Getter
 @ToString
 public final class SaveData {
@@ -40,6 +45,9 @@ public final class SaveData {
     sort();
   }
 
+  /**
+   * Saves the data to the storage.
+   */
   public void save() {
     SaveLoad.save(this);
     saved = true;
@@ -68,6 +76,11 @@ public final class SaveData {
     });
   }
 
+  /**
+   * Returns the instance of the SaveData class.
+   *
+   * @return The SaveData instance.
+   */
   public static SaveData getInstance() {
     if (instance == null) {
       instance = new SaveData();
@@ -75,36 +88,66 @@ public final class SaveData {
     return instance;
   }
 
+  /**
+   * Sets the list of articles.
+   *
+   * @param newArticles The new list of articles.
+   */
   public void setArticles(final List<Article> newArticles) {
     if (articles != null) {
       this.articles = newArticles;
     }
   }
 
+  /**
+   * Sets the list of currencies.
+   *
+   * @param newCurrencies The new list of currencies.
+   */
   public void setCurrencies(final List<Currency> newCurrencies) {
     if (currencies != null) {
       this.currencies = newCurrencies;
     }
   }
 
+  /**
+   * Sets the list of accounts.
+   *
+   * @param newAccounts The new list of accounts.
+   */
   public void setAccounts(final List<Account> newAccounts) {
     if (accounts != null) {
       this.accounts = newAccounts;
     }
   }
 
+  /**
+   * Sets the list of transactions.
+   *
+   * @param newTransactions The new list of transactions.
+   */
   public void setTransactions(final List<Transaction> newTransactions) {
     if (transactions != null) {
       this.transactions = newTransactions;
     }
   }
 
+  /**
+   * Sets the list of transfers.
+   *
+   * @param newTransfers The new list of transfers.
+   */
   public void setTransfers(final List<Transfer> newTransfers) {
     if (transfers != null) {
       this.transfers = newTransfers;
     }
   }
 
+  /**
+   * Returns the base currency.
+   *
+   * @return The base currency.
+   */
   public Currency getBaseCurrency() {
     for (Currency c : currencies) {
       if (c.isBase()) {
@@ -114,6 +157,11 @@ public final class SaveData {
     return new Currency();
   }
 
+  /**
+   * Returns the list of enabled currencies.
+   *
+   * @return The list of enabled currencies.
+   */
   public ArrayList<Currency> getEnableCurrencies() {
     ArrayList<Currency> list = new ArrayList<>();
     for (Currency c : currencies) {
@@ -124,6 +172,11 @@ public final class SaveData {
     return list;
   }
 
+  /**
+   * Returns the list of transactions that match the current filter.
+   *
+   * @return The list of filtered transactions.
+   */
   public List<Transaction> getFilterTransactions() {
     ArrayList<Transaction> list = new ArrayList<>();
     for (Transaction t : transactions) {
@@ -134,6 +187,11 @@ public final class SaveData {
     return list;
   }
 
+  /**
+   * Returns the list of transfers that match the current filter.
+   *
+   * @return The list of filtered transfers.
+   */
   public List<Transfer> getFilterTransfers() {
     ArrayList<Transfer> list = new ArrayList<>();
     for (Transfer t : transfers) {
@@ -144,10 +202,19 @@ public final class SaveData {
     return list;
   }
 
+  /**
+   * Returns a list of transactions up to the specified count.
+   *
+   * @param count The maximum number of transactions to return.
+   * @return The list of transactions.
+   */
   public List<Transaction> getTransactionsOnCount(int count) {
     return new ArrayList<>(transactions.subList(0, Math.min(count, transactions.size())));
   }
 
+  /**
+   * Updates the currency rates based on the current rates.
+   */
   public void updateCurrencies() {
     HashMap<String, Double> rates = RateCurrency.getRates();
     for (Currency c : currencies) {
@@ -163,6 +230,12 @@ public final class SaveData {
     saved = false;
   }
 
+  /**
+   * Adds a new common object to the appropriate list.
+   *
+   * @param c The common object to add.
+   * @throws ModelException if the object already exists.
+   */
   public void add(Common c) throws ModelException {
     List ref = getRef(c);
     if (ref.contains(c)) {
@@ -174,6 +247,13 @@ public final class SaveData {
     saved = false;
   }
 
+  /**
+   * Edits an existing common object with a new one.
+   *
+   * @param oldC The old common object.
+   * @param newC The new common object.
+   * @throws ModelException if the new object already exists.
+   */
   public void edit(Common oldC, Common newC) throws ModelException {
     List ref = getRef(oldC);
     if (ref.contains(newC) && oldC != ref.get(ref.indexOf(newC))) {
@@ -186,6 +266,11 @@ public final class SaveData {
     saved = false;
   }
 
+  /**
+   * Removes a common object from the appropriate list.
+   *
+   * @param c The common object to remove.
+   */
   public void remove(Common c) {
     getRef(c).remove(c);
     c.postRemove(this);

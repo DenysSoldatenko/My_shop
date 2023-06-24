@@ -6,11 +6,23 @@ import java.util.List;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
+/**
+ * The Statistics class provides various statistical calculations
+ * and data retrieval related to financial transactions and accounts.
+ * It includes methods for calculating balances, generating chart data
+ * based on income and expense articles, and rounding values.
+ */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class Statistics {
 
   private static final int ROUNDING_FACTOR = 100;
 
+  /**
+   * Retrieves the total balance in a specific currency.
+   *
+   * @param currency The currency for which to calculate the balance.
+   * @return The total balance in the specified currency.
+   */
   public static double getBalanceCurrency(final Currency currency) {
     SaveData sd = SaveData.getInstance();
     double amount = 0;
@@ -22,6 +34,12 @@ public final class Statistics {
     return amount;
   }
 
+  /**
+   * Retrieves the total balance converted to a specific currency.
+   *
+   * @param cur The target currency for conversion.
+   * @return The total balance in the converted currency.
+   */
   public static double getBalance(final Currency cur) {
     SaveData sd = SaveData.getInstance();
     double amount = 0;

@@ -10,8 +10,16 @@ import java.util.HashMap;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+/**
+ * The RateCurrency class provides methods for retrieving currency exchange rates from an API.
+ */
 public class RateCurrency {
 
+  /**
+   * Retrieves the currency exchange rates from the API.
+   *
+   * @return a HashMap containing currency codes as keys and their corresponding rates as values.
+   */
   public static HashMap<String, Double> getRates() {
     HashMap<String, Double> result = new HashMap<>();
 
@@ -33,7 +41,12 @@ public class RateCurrency {
     return result;
   }
 
-
+  /**
+   * Retrieves a JSON array from the specified URL.
+   *
+   * @param url the URL from which to retrieve the JSON array.
+   * @return the JSON array retrieved from the URL, or null if an error occurred.
+   */
   private static JSONArray getJsonArrayFromUrl(String url) {
     try {
       URL apiUrl = new URL(url);

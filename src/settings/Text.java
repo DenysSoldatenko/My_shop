@@ -74,5 +74,40 @@ public final class Text {
 
     DATA.put("YES", "Так");
     DATA.put("NO", "Ні");
+
+    DATA.put("MENU_FILE_NEW", "Новий");
+    DATA.put("MENU_FILE_OPEN", "Відкрити");
+    DATA.put("MENU_FILE_SAVE", "Зберегти");
+    DATA.put("MENU_FILE_UPDATE_CURRENCIES", "Оновити курси валют");
+    DATA.put("MENU_FILE_EXIT", "Вихід");
+
+    DATA.put("MENU_EDIT_ADD", "Додати");
+    DATA.put("MENU_EDIT_EDIT", "Змінити");
+    DATA.put("MENU_EDIT_DELETE", "Видалити");
+
+    DATA.put("MENU_VIEW_OVERVIEW", "Огляд");
+    DATA.put("MENU_VIEW_ACCOUNTS", "Рахунки");
+    DATA.put("MENU_VIEW_ARTICLES", "Статті");
+    DATA.put("MENU_VIEW_TRANSACTIONS", "Транзакції");
+    DATA.put("MENU_VIEW_TRANSFERS", "Перекази");
+    DATA.put("MENU_VIEW_CURRENCIES", "Валюти");
+    DATA.put("MENU_VIEW_STATISTICS", "Статистика");
+
+    DATA.put("MENU_HELP_ABOUT", "Про програму");
+
+    DATA.put("TOOLBAR_OVERVIEW", "Огляд");
+    DATA.put("TOOLBAR_ACCOUNTS", "Рахунки");
+    DATA.put("TOOLBAR_ARTICLES", "Статті");
+    DATA.put("TOOLBAR_TRANSACTIONS", "Транзакції");
+    DATA.put("TOOLBAR_TRANSFERS", "Перекази");
+    DATA.put("TOOLBAR_CURRENCIES", "Валюти");
+    DATA.put("TOOLBAR_STATISTICS", "Статистика");
+
+    DATA.put("ADD", "Додати");
+    DATA.put("EDIT", "Змінити");
+    DATA.put("DELETE", "Видалити");
+    DATA.put("CANCEL", "Відміна");
+
+    DATA.put("TODAY", "Сьогодні");
   }
 }

@@ -12,6 +12,13 @@ import models.Currency;
 import models.Transaction;
 import models.Transfer;
 
+/**
+ * The Wrapper class is a data storage class that serves as a wrapper for storing lists of
+ * various financial entities such as articles, accounts, transactions, transfers, and currencies.
+ * It is primarily used for serialization and deserialization purposes,
+ * allowing the data to be easily stored and retrieved in a structured format.
+ * The class utilizes the Jackson library annotations for JSON serialization and deserialization.
+ */
 @Getter
 @Setter
 @NoArgsConstructor

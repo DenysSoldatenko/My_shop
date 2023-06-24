@@ -7,6 +7,11 @@ import java.util.GregorianCalendar;
 import lombok.Getter;
 import lombok.ToString;
 
+/**
+ * The Filter class represents a time filter used to filter data based on a specific time period.
+ * It allows setting the step (day, month, or year) and provides methods to navigate through time
+ * periods and check if a date falls within the filter's range.
+ */
 @Getter
 @ToString
 public final class Filter {
@@ -34,6 +39,9 @@ public final class Filter {
     offset(-1);
   }
 
+  /**
+   * Advances the filter to the next higher time period.
+   */
   public void nextPeriod() {
     step += 1;
     if (step > STEP_YEAR) {
