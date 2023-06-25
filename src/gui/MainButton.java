@@ -1,12 +1,12 @@
 package gui;
 
-import settings.styles.ColorStyle;
-import settings.styles.FontStyle;
-
-import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import settings.styles.ColorStyle;
+import settings.styles.FontStyle;
 
 public class MainButton extends JButton {
 

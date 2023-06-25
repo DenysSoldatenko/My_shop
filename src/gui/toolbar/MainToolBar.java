@@ -1,11 +1,10 @@
 package gui.toolbar;
 
+import javax.swing.Box;
 import settings.HandlerCode;
 import settings.Text;
 import settings.styles.BorderStyle;
 import settings.styles.ImageIconStyle;
-
-import javax.swing.*;
 
 public final class MainToolBar extends AbstractToolBar {
 

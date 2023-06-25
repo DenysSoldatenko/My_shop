@@ -4,6 +4,9 @@ import java.util.HashMap;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
+/**
+ * The Text class provides localized text resources for the application.
+ */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class Text {
 
@@ -23,6 +26,12 @@ public final class Text {
     "DECEMBER"
   };
 
+  /**
+   * Retrieves the localized text for the specified key.
+   *
+   * @param key the key for the desired text
+   * @return the localized text associated with the key, or an empty string if the key is not found
+   */
   public static String get(final String key) {
     if (DATA.containsKey(key)) {
       return DATA.get(key);
@@ -31,6 +40,11 @@ public final class Text {
     return "";
   }
 
+  /**
+   * Retrieves the localized names of the months.
+   *
+   * @return an array of localized month names
+   */
   public static String[] getMonths() {
     String[] months = new String[MONTHS.length];
     for (int i = 0; i < MONTHS.length; i++) {
@@ -39,6 +53,9 @@ public final class Text {
     return months;
   }
 
+  /**
+   * Initializes the text resources with localized strings.
+   */
   public static void init() {
     DATA.put("PROGRAM_NAME", "Домашня бухгалтерія");
     DATA.put("MENU_FILE", "Файл");
@@ -109,5 +126,24 @@ public final class Text {
     DATA.put("CANCEL", "Відміна");
 
     DATA.put("TODAY", "Сьогодні");
+
+    DATA.put("FC_HOME", "Домашня директорія");
+    DATA.put("FC_OPEN", "Відкрити");
+    DATA.put("FC_SAVE", "Зберегти");
+    DATA.put("FC_CANCEL", "Скасувати");
+    DATA.put("FC_LOOK", "Папка:");
+    DATA.put("FC_NAME_FILE", "Ім'я файлу:");
+    DATA.put("FC_TYPE_FILE", "Тип файлу:");
+    DATA.put("FC_UP", "Вгору");
+    DATA.put("FC_NEW_DIRECTORY", "Нова папка");
+    DATA.put("FC_LIST", "Список");
+    DATA.put("FC_TABLE", "Таблиця");
+    DATA.put("FC_NAME", "Ім'я");
+    DATA.put("FC_SIZE", "Розмір");
+    DATA.put("FC_TYPE", "Тип");
+    DATA.put("FC_DATE", "Дата");
+    DATA.put("FC_ATTR", "Атрибути");
+    DATA.put("FC_ALL_FILTER", "Всі файли");
+
   }
 }

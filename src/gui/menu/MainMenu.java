@@ -29,13 +29,12 @@ public class MainMenu extends JMenuBar implements Refresh, EnableEditDelete {
 
   private void init() {
     JMenu file = new JMenu(Text.get("MENU_FILE"));
-    JMenu edit = new JMenu(Text.get("MENU_EDIT"));
-    JMenu view = new JMenu(Text.get("MENU_VIEW"));
-    JMenu help = new JMenu(Text.get("MENU_HELP"));
-
     file.setIcon(ImageIconStyle.ICON_MENU_FILE);
+    JMenu edit = new JMenu(Text.get("MENU_EDIT"));
     edit.setIcon(ImageIconStyle.ICON_MENU_EDIT);
+    JMenu view = new JMenu(Text.get("MENU_VIEW"));
     view.setIcon(ImageIconStyle.ICON_MENU_VIEW);
+    JMenu help = new JMenu(Text.get("MENU_HELP"));
     help.setIcon(ImageIconStyle.ICON_MENU_HELP);
 
     add(file);

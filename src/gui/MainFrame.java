@@ -2,13 +2,13 @@ package gui;
 
 import gui.menu.MainMenu;
 import gui.toolbar.MainToolBar;
-import settings.styles.ImageIconStyle;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import javax.swing.JFrame;
 import settings.Text;
+import settings.styles.ImageIconStyle;
 
-import javax.swing.*;
-import java.awt.*;
-
-public final class MainFrame extends JFrame implements Refresh{
+public final class MainFrame extends JFrame implements Refresh {
 
   private final GridBagConstraints constraints;
   private final MainMenu mb;
@@ -20,6 +20,10 @@ public final class MainFrame extends JFrame implements Refresh{
     setResizable(false);
     setIconImage(ImageIconStyle.ICON_MAIN.getImage());
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+    MainFileChooser mainFileChooser = new MainFileChooser(this);
+    mainFileChooser.save();
+    mainFileChooser.open();
 
     setResizable(false);
     setIconImage(ImageIconStyle.ICON_MAIN.getImage());

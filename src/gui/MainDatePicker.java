@@ -1,14 +1,14 @@
 package gui;
 
+import java.util.Date;
+import java.util.Properties;
+import javax.swing.JButton;
 import org.jdatepicker.impl.DateComponentFormatter;
 import org.jdatepicker.impl.JDatePanelImpl;
 import org.jdatepicker.impl.JDatePickerImpl;
 import org.jdatepicker.impl.UtilDateModel;
 import settings.Text;
 import settings.styles.ImageIconStyle;
-import java.util.Date;
-import javax.swing.*;
-import java.util.Properties;
 
 public class MainDatePicker {
 

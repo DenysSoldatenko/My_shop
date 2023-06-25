@@ -19,8 +19,8 @@ import org.ini4j.Wini;
 public final class Settings {
 
   public static final File FONT_ROBOTO_LIGHT = new File("src/gui/fonts/Roboto-Light.ttf");
-  public static final File SAVE_DIR = new File("src/configurations/");
-  public static final String SAVE_FILE_EXT = "vap";
+  public static final File SAVE_DIRECTORY = new File("src/configurations/");
+  public static final String SAVE_FILE_EXTENSION = "json";
   public static final String FORMAT_AMOUNT = "%.2f";
   public static final String FORMAT_RATE = "%.4f";
   public static final String FORMAT_DATE = "dd.MM.yyyy";

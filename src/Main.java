@@ -1,10 +1,5 @@
 import datastorages.SaveData;
-
 import gui.MainFrame;
-import models.*;
-import settings.Settings;
-import settings.Text;
-import settings.exceptions.ModelException;
 import java.awt.Font;
 import java.awt.FontFormatException;
 import java.awt.GraphicsEnvironment;
@@ -14,8 +9,18 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import models.Account;
+import models.Article;
+import models.Currency;
+import models.Transaction;
+import models.Transfer;
+import settings.Settings;
+import settings.Text;
+import settings.exceptions.ModelException;
 
-
+/**
+ * The Main class serves as the entry point of the application.
+ */
 public class Main {
   public static void main(String[] args) {
     init();

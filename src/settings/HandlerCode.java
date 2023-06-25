@@ -1,6 +1,10 @@
 package settings;
 
-final public class HandlerCode {
+/**
+ * The HandlerCode class contains constants representing
+ * handler codes for various menu items and toolbar buttons.
+ */
+public final class HandlerCode {
 
   public static final String MENU_FILE_NEW = "MENU_FILE_NEW";
   public static final String MENU_FILE_OPEN = "MENU_FILE_OPEN";
