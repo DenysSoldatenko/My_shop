@@ -1,5 +1,6 @@
 package settings;
 
+import java.util.Calendar;
 import java.util.HashMap;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -144,6 +145,35 @@ public final class Text {
     DATA.put("FC_DATE", "Дата");
     DATA.put("FC_ATTR", "Атрибути");
     DATA.put("FC_ALL_FILTER", "Всі файли");
+
+    DATA.put("LABEL_TITLE", "Назва:");
+    DATA.put("LABEL_CURRENCY", "Валюта:");
+    DATA.put("LABEL_START_AMOUNT", "Початковий баланс:");
+    DATA.put("LABEL_DATE", "Дата:");
+    DATA.put("LABEL_ACCOUNT", "Рахунок:");
+    DATA.put("LABEL_ARTICLE", "Стаття:");
+    DATA.put("LABEL_AMOUNT", "Сума:");
+    DATA.put("LABEL_NOTICE", "Примітка:");
+    DATA.put("LABEL_FROM_ACCOUNT", "Звідки:");
+    DATA.put("LABEL_TO_ACCOUNT", "Куди:");
+    DATA.put("LABEL_FROM_AMOUNT", "Списано:");
+    DATA.put("LABEL_TO_AMOUNT", "Зачислено:");
+    DATA.put("LABEL_CODE", "Код:");
+    DATA.put("LABEL_RATE", "Курс:");
+    DATA.put("LABEL_ON", "Увімкнено:");
+    DATA.put("LABEL_BASE", "Базова:");
+
+    DATA.put("DIALOG_ABOUT_TITLE", "Про програму");
+    DATA.put("ABOUT",
+        "<body style='font-size: 140%; text-align: center; width: 350px; margin: 0 auto; "
+        + "p { text-align: justify; } p::first-letter { text-indent: 0px; }'>"
+        + "<p><img src='file:src/gui/images/main.png' /></p>"
+        + "<h1>Домашня бухгалтерія</h1>"
+        + "<p> Мета додатка полягає у створенні зручного інтерфейсу для програмістів, "
+        + "включаючи роботу з даними, збереження та завантаження даних, "
+        + "створення базового інтерфейсу користувача, діалогових вікон, "
+        + "виведення даних, статистики та обробки подій. </p>"
+        + "<p> Україна, " + Calendar.getInstance().get(Calendar.YEAR) + " </p></body>");
 
   }
 }

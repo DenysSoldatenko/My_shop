@@ -60,8 +60,8 @@ public class ImageIconStyle {
 
   public static final ImageIcon ICON_MENU_SETTINGS_LANGUAGE
       = new ImageIcon("src/gui/images/menu_settings_language.png");
-  public static final ImageIcon ICON_MENU_SETTINGS_LANGUAGE_RUSSIAN
-      = new ImageIcon("src/gui/images/menu_settings_language_russian.png");
+  public static final ImageIcon ICON_MENU_SETTINGS_LANGUAGE_UKRAINIAN
+      = new ImageIcon("src/gui/images/menu_settings_language_ukrainian.png");
   public static final ImageIcon ICON_MENU_SETTINGS_LANGUAGE_ENGLISH
       = new ImageIcon("src/gui/images/menu_settings_language_english.png");
 

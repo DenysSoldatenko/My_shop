@@ -81,7 +81,7 @@ public final class Currency extends Common {
   }
 
   @Override
-  public String getValueFromComboBox() {
+  public String getValueForComboBox() {
     return title;
   }
 

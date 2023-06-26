@@ -33,7 +33,7 @@ public final class Article extends Common {
   }
 
   @Override
-  public String getValueFromComboBox() {
+  public String getValueForComboBox() {
     return title;
   }
 

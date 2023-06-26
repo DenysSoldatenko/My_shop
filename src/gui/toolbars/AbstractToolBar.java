@@ -1,4 +1,4 @@
-package gui.toolbar;
+package gui.toolbars;
 
 import gui.MainButton;
 import gui.Refresh;

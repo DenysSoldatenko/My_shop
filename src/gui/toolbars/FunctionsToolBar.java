@@ -1,4 +1,4 @@
-package gui.toolbar;
+package gui.toolbars;
 
 import gui.EnableEditDelete;
 import gui.MainButton;

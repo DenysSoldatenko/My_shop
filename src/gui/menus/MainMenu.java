@@ -1,4 +1,4 @@
-package gui.menu;
+package gui.menus;
 
 import gui.EnableEditDelete;
 import gui.MainFrame;
@@ -13,7 +13,6 @@ import javax.swing.KeyStroke;
 import settings.HandlerCode;
 import settings.Text;
 import settings.styles.ImageIconStyle;
-
 
 public class MainMenu extends JMenuBar implements Refresh, EnableEditDelete {
 

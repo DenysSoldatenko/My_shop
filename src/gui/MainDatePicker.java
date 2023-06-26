@@ -10,10 +10,17 @@ import org.jdatepicker.impl.UtilDateModel;
 import settings.Text;
 import settings.styles.ImageIconStyle;
 
+/**
+ * A wrapper class for the JDatePicker component used in the GUI.
+ */
 public class MainDatePicker {
 
   private final JDatePickerImpl datePicker;
 
+  /**
+   * Constructs a new MainDatePicker instance.
+   * Initializes the JDatePickerImpl with the current date and custom properties.
+   */
   public MainDatePicker() {
     UtilDateModel model = new UtilDateModel();
     Properties p = new Properties();

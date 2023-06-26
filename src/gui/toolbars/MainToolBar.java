@@ -1,4 +1,4 @@
-package gui.toolbar;
+package gui.toolbars;
 
 import javax.swing.Box;
 import settings.HandlerCode;

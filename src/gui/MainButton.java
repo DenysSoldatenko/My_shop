@@ -8,8 +8,19 @@ import javax.swing.JButton;
 import settings.styles.ColorStyle;
 import settings.styles.FontStyle;
 
+/**
+ * A custom JButton with styles and hover effect for the main GUI buttons.
+ */
 public class MainButton extends JButton {
 
+  /**
+   * Constructs a MainButton with the specified title, icon, action listener, and action command.
+   *
+   * @param title the button's title
+   * @param icon the button's icon
+   * @param listener the action listener for the button
+   * @param action the action command for the button
+   */
   public MainButton(String title, ImageIcon icon, ActionListener listener, String action) {
     super(title);
     setIcon(icon);

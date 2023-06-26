@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 public abstract class Common {
 
   @JsonIgnore
-  public String getValueFromComboBox() {
+  public String getValueForComboBox() {
     return null;
   }
 
