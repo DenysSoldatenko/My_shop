@@ -163,6 +163,9 @@ public final class Text {
     DATA.put("LABEL_ON", "Увімкнено:");
     DATA.put("LABEL_BASE", "Базова:");
 
+    DATA.put("BALANCE_CURRENCIES", "Баланс по валютах");
+    DATA.put("BALANCE", "Загальний баланс");
+
     DATA.put("DIALOG_ABOUT_TITLE", "Про програму");
     DATA.put("ABOUT",
         "<body style='font-size: 140%; text-align: center; width: 350px; margin: 0 auto; "

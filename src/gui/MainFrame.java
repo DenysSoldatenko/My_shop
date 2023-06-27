@@ -1,12 +1,12 @@
 package gui;
 
-import datastorages.SaveData;
-import gui.dialogs.CurrencyAddEditDialog;
 import gui.menus.MainMenu;
+import gui.panels.LeftPanel;
 import gui.toolbars.MainToolBar;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 import settings.Text;
 import settings.styles.ImageIconStyle;
 
@@ -18,6 +18,7 @@ public final class MainFrame extends JFrame implements Refresh {
   private final GridBagConstraints constraints;
   private final MainMenu mb;
   private final MainToolBar tb;
+  private final LeftPanel leftPanel;
 
   /**
    * Constructs a new instance of the MainFrame.
@@ -25,10 +26,6 @@ public final class MainFrame extends JFrame implements Refresh {
    */
   public MainFrame() {
     super(Text.get("PROGRAM_NAME"));
-
-    CurrencyAddEditDialog currencyAddEditDialog = new CurrencyAddEditDialog(this);
-    currencyAddEditDialog.setCommon(SaveData.getInstance().getBaseCurrency());
-    currencyAddEditDialog.showDialog();
 
     setVisible(true);
     setResizable(false);
@@ -53,8 +50,8 @@ public final class MainFrame extends JFrame implements Refresh {
     constraints.gridwidth = 1;
     constraints.anchor = GridBagConstraints.NORTH;
 
-    //add(new FunctionsToolBar(), constraints);
-    add(new MainDatePicker().getDatePicker(), constraints);
+    leftPanel = new LeftPanel(this);
+    add(leftPanel, constraints);
 
     pack();
     setLocationRelativeTo(null);
@@ -62,6 +59,9 @@ public final class MainFrame extends JFrame implements Refresh {
 
   @Override
   public void refresh() {
-    System.out.println("1");
+    SwingUtilities.updateComponentTreeUI(this);
+    tb.refresh();
+    leftPanel.refresh();
+    pack();
   }
 }

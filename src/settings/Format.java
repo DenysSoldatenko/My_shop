@@ -1,6 +1,7 @@
 package settings;
 
 import java.text.DateFormatSymbols;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import lombok.AccessLevel;
@@ -17,7 +18,8 @@ import models.Filter;
 public final class Format {
 
   public static String amount(final double amount) {
-    return String.format(Settings.FORMAT_AMOUNT, amount);
+    DecimalFormat decimalFormat = new DecimalFormat(Settings.FORMAT_AMOUNT);
+    return decimalFormat.format(amount);
   }
 
   public static String amount(final double amount, final Currency currency) {

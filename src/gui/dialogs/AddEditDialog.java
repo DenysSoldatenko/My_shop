@@ -29,6 +29,10 @@ import settings.styles.DimensionStyle;
 import settings.styles.FontStyle;
 import settings.styles.ImageIconStyle;
 
+/**
+ * The AddEditDialog class represents an abstract dialog for adding or editing entities.
+ * It provides a common structure and functionality for subclasses to implement specific dialogs.
+ */
 @Getter
 @Setter
 public abstract class AddEditDialog extends JDialog {
@@ -39,6 +43,11 @@ public abstract class AddEditDialog extends JDialog {
   protected LinkedHashMap<String, Object> values = new LinkedHashMap<>();
   protected Common common;
 
+  /**
+   * Constructs an AddEditDialog object with the specified MainFrame instance.
+   *
+   * @param frame the MainFrame instance to associate with the dialog
+   */
   public AddEditDialog(MainFrame frame) {
     super(frame, Text.get("ADD"), true);
     this.frame = frame;
@@ -126,11 +135,17 @@ public abstract class AddEditDialog extends JDialog {
     add(panelButtons);
   }
 
+  /**
+   * Displays the dialog.
+   */
   public final void showDialog() {
     setDialog();
     setVisible(true);
   }
 
+  /**
+   * Closes the dialog and resets its state.
+   */
   public final void closeDialog() {
     setVisible(false);
     this.common = null;
