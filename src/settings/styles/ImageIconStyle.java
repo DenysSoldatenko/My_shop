@@ -12,143 +12,143 @@ import lombok.NoArgsConstructor;
 public class ImageIconStyle {
 
   public static final ImageIcon ICON_MAIN
-      = new ImageIcon("src/gui/images/main.png");
+      = new ImageIcon("src/settings/images/main.png");
 
   public static final ImageIcon ICON_MENU_FILE
-      = new ImageIcon("src/gui/images/menu_file.png");
+      = new ImageIcon("src/settings/images/menu_file.png");
   public static final ImageIcon ICON_MENU_EDIT
-      = new ImageIcon("src/gui/images/menu_edit.png");
+      = new ImageIcon("src/settings/images/menu_edit.png");
   public static final ImageIcon ICON_MENU_VIEW
-      = new ImageIcon("src/gui/images/menu_view.png");
+      = new ImageIcon("src/settings/images/menu_view.png");
   public static final ImageIcon ICON_MENU_SETTINGS
-      = new ImageIcon("src/gui/images/menu_settings.png");
+      = new ImageIcon("src/settings/images/menu_settings.png");
   public static final ImageIcon ICON_MENU_HELP
-      = new ImageIcon("src/gui/images/menu_help.png");
+      = new ImageIcon("src/settings/images/menu_help.png");
 
   public static final ImageIcon ICON_MENU_FILE_NEW
-      = new ImageIcon("src/gui/images/menu_file_new.png");
+      = new ImageIcon("src/settings/images/menu_file_new.png");
   public static final ImageIcon ICON_MENU_FILE_OPEN
-      = new ImageIcon("src/gui/images/menu_file_open.png");
+      = new ImageIcon("src/settings/images/menu_file_open.png");
   public static final ImageIcon ICON_MENU_FILE_SAVE
-      = new ImageIcon("src/gui/images/menu_file_save.png");
+      = new ImageIcon("src/settings/images/menu_file_save.png");
   public static final ImageIcon ICON_MENU_FILE_UPDATE_CURRENCIES
-      = new ImageIcon("src/gui/images/menu_file_update_currencies.png");
+      = new ImageIcon("src/settings/images/menu_file_update_currencies.png");
   public static final ImageIcon ICON_MENU_FILE_EXIT
-      = new ImageIcon("src/gui/images/menu_file_exit.png");
+      = new ImageIcon("src/settings/images/menu_file_exit.png");
 
   public static final ImageIcon ICON_MENU_EDIT_ADD
-      = new ImageIcon("src/gui/images/menu_edit_add.png");
+      = new ImageIcon("src/settings/images/menu_edit_add.png");
   public static final ImageIcon ICON_MENU_EDIT_EDIT
-      = new ImageIcon("src/gui/images/menu_edit_edit.png");
+      = new ImageIcon("src/settings/images/menu_edit_edit.png");
   public static final ImageIcon ICON_MENU_EDIT_DELETE
-      = new ImageIcon("src/gui/images/menu_edit_delete.png");
+      = new ImageIcon("src/settings/images/menu_edit_delete.png");
 
   public static final ImageIcon ICON_MENU_VIEW_OVERVIEW
-      = new ImageIcon("src/gui/images/menu_view_overview.png");
+      = new ImageIcon("src/settings/images/menu_view_overview.png");
   public static final ImageIcon ICON_MENU_VIEW_ACCOUNTS
-      = new ImageIcon("src/gui/images/menu_view_accounts.png");
+      = new ImageIcon("src/settings/images/menu_view_accounts.png");
   public static final ImageIcon ICON_MENU_VIEW_ARTICLES
-      = new ImageIcon("src/gui/images/menu_view_articles.png");
+      = new ImageIcon("src/settings/images/menu_view_articles.png");
   public static final ImageIcon ICON_MENU_VIEW_TRANSACTIONS
-      = new ImageIcon("src/gui/images/menu_view_transactions.png");
+      = new ImageIcon("src/settings/images/menu_view_transactions.png");
   public static final ImageIcon ICON_MENU_VIEW_TRANSFERS
-      = new ImageIcon("src/gui/images/menu_view_transfers.png");
+      = new ImageIcon("src/settings/images/menu_view_transfers.png");
   public static final ImageIcon ICON_MENU_VIEW_CURRENCIES
-      = new ImageIcon("src/gui/images/menu_view_currencies.png");
+      = new ImageIcon("src/settings/images/menu_view_currencies.png");
   public static final ImageIcon ICON_MENU_VIEW_STATISTICS
-      = new ImageIcon("src/gui/images/menu_view_statistics.png");
+      = new ImageIcon("src/settings/images/menu_view_statistics.png");
 
   public static final ImageIcon ICON_MENU_SETTINGS_LANGUAGE
-      = new ImageIcon("src/gui/images/menu_settings_language.png");
+      = new ImageIcon("src/settings/images/menu_settings_language.png");
   public static final ImageIcon ICON_MENU_SETTINGS_LANGUAGE_UKRAINIAN
-      = new ImageIcon("src/gui/images/menu_settings_language_ukrainian.png");
+      = new ImageIcon("src/settings/images/menu_settings_language_ukrainian.png");
   public static final ImageIcon ICON_MENU_SETTINGS_LANGUAGE_ENGLISH
-      = new ImageIcon("src/gui/images/menu_settings_language_english.png");
+      = new ImageIcon("src/settings/images/menu_settings_language_english.png");
 
   public static final ImageIcon ICON_MENU_HELP_ABOUT
-      = new ImageIcon("src/gui/images/menu_help_about.png");
+      = new ImageIcon("src/settings/images/menu_help_about.png");
 
   public static final Icon ICON_MENU_POPUP_EDIT
-      = new ImageIcon("src/gui/images/menu_popup_edit.png");
+      = new ImageIcon("src/settings/images/menu_popup_edit.png");
   public static final Icon ICON_MENU_POPUP_DELETE
-      = new ImageIcon("src/gui/images/menu_popup_delete.png");
+      = new ImageIcon("src/settings/images/menu_popup_delete.png");
 
   public static final ImageIcon ICON_TOOLBAR_OVERVIEW
-      = new ImageIcon("src/gui/images/overview.png");
+      = new ImageIcon("src/settings/images/overview.png");
   public static final ImageIcon ICON_TOOLBAR_ACCOUNTS
-      = new ImageIcon("src/gui/images/accounts.png");
+      = new ImageIcon("src/settings/images/accounts.png");
   public static final ImageIcon ICON_TOOLBAR_ARTICLES
-      = new ImageIcon("src/gui/images/articles.png");
+      = new ImageIcon("src/settings/images/articles.png");
   public static final ImageIcon ICON_TOOLBAR_TRANSACTIONS
-      = new ImageIcon("src/gui/images/transactions.png");
+      = new ImageIcon("src/settings/images/transactions.png");
   public static final ImageIcon ICON_TOOLBAR_TRANSFERS
-      = new ImageIcon("src/gui/images/transfers.png");
+      = new ImageIcon("src/settings/images/transfers.png");
   public static final ImageIcon ICON_TOOLBAR_CURRENCIES
-      = new ImageIcon("src/gui/images/currencies.png");
+      = new ImageIcon("src/settings/images/currencies.png");
   public static final ImageIcon ICON_TOOLBAR_STATISTICS
-      = new ImageIcon("src/gui/images/statistics.png");
+      = new ImageIcon("src/settings/images/statistics.png");
 
   public static final ImageIcon ICON_ADD
-      = new ImageIcon("src/gui/images/add.png");
+      = new ImageIcon("src/settings/images/add.png");
   public static final ImageIcon ICON_EDIT
-      = new ImageIcon("src/gui/images/edit.png");
+      = new ImageIcon("src/settings/images/edit.png");
   public static final ImageIcon ICON_DELETE
-      = new ImageIcon("src/gui/images/delete.png");
+      = new ImageIcon("src/settings/images/delete.png");
 
   public static final ImageIcon ICON_DATE
-      = new ImageIcon("src/gui/images/date.png");
+      = new ImageIcon("src/settings/images/date.png");
 
   public static final ImageIcon ICON_ABOUT
-      = new ImageIcon("src/gui/images/menu_help_about.png");
+      = new ImageIcon("src/settings/images/menu_help_about.png");
 
   public static final ImageIcon ICON_OK
-      = new ImageIcon("src/gui/images/ok.png");
+      = new ImageIcon("src/settings/images/ok.png");
   public static final ImageIcon ICON_CANCEL
-      = new ImageIcon("src/gui/images/cancel.png");
+      = new ImageIcon("src/settings/images/cancel.png");
 
   public static final ImageIcon ICON_TITLE
-      = new ImageIcon("src/gui/images/title.png");
+      = new ImageIcon("src/settings/images/title.png");
   public static final ImageIcon ICON_CURRENCY
-      = new ImageIcon("src/gui/images/currency.png");
+      = new ImageIcon("src/settings/images/currency.png");
   public static final ImageIcon ICON_AMOUNT
-      = new ImageIcon("src/gui/images/amount.png");
+      = new ImageIcon("src/settings/images/amount.png");
   public static final ImageIcon ICON_ACCOUNT
-      = new ImageIcon("src/gui/images/account.png");
+      = new ImageIcon("src/settings/images/account.png");
   public static final ImageIcon ICON_ARTICLE
-      = new ImageIcon("src/gui/images/article.png");
+      = new ImageIcon("src/settings/images/article.png");
   public static final ImageIcon ICON_NOTICE
-      = new ImageIcon("src/gui/images/notice.png");
+      = new ImageIcon("src/settings/images/notice.png");
   public static final ImageIcon ICON_CODE
-      = new ImageIcon("src/gui/images/code.png");
+      = new ImageIcon("src/settings/images/code.png");
   public static final ImageIcon ICON_RATE
-      = new ImageIcon("src/gui/images/rate.png");
+      = new ImageIcon("src/settings/images/rate.png");
   public static final ImageIcon ICON_ON
-      = new ImageIcon("src/gui/images/on.png");
+      = new ImageIcon("src/settings/images/on.png");
   public static final ImageIcon ICON_BASE
-      = new ImageIcon("src/gui/images/base.png");
+      = new ImageIcon("src/settings/images/base.png");
 
   public static final ImageIcon ICON_LEFT_PANEL_BALANCE_CURRENCIES
-      = new ImageIcon("src/gui/images/balance_currencies.png");
+      = new ImageIcon("src/settings/images/balance_currencies.png");
   public static final ImageIcon ICON_LEFT_PANEL_BALANCE
-      = new ImageIcon("src/gui/images/balance.png");
+      = new ImageIcon("src/settings/images/balance.png");
 
   public static final ImageIcon ICON_LEFT
-      = new ImageIcon("src/gui/images/left.png");
+      = new ImageIcon("src/settings/images/left.png");
   public static final ImageIcon ICON_RIGHT
-      = new ImageIcon("src/gui/images/right.png");
+      = new ImageIcon("src/settings/images/right.png");
 
   public static final ImageIcon ICON_PANEL_OVERVIEW
-      = new ImageIcon("src/gui/images/overview_panel.png");
+      = new ImageIcon("src/settings/images/overview_panel.png");
   public static final ImageIcon ICON_PANEL_TRANSACTIONS
-      = new ImageIcon("src/gui/images/transactions_panel.png");
+      = new ImageIcon("src/settings/images/transactions_panel.png");
   public static final ImageIcon ICON_PANEL_ACCOUNTS
-      = new ImageIcon("src/gui/images/accounts_panel.png");
+      = new ImageIcon("src/settings/images/accounts_panel.png");
   public static final ImageIcon ICON_PANEL_ARTICLES
-      = new ImageIcon("src/gui/images/articles_panel.png");
+      = new ImageIcon("src/settings/images/articles_panel.png");
   public static final ImageIcon ICON_PANEL_TRANSFERS
-      = new ImageIcon("src/gui/images/transfers_panel.png");
+      = new ImageIcon("src/settings/images/transfers_panel.png");
   public static final ImageIcon ICON_PANEL_CURRENCIES
-      = new ImageIcon("src/gui/images/currencies_panel.png");
+      = new ImageIcon("src/settings/images/currencies_panel.png");
   public static final ImageIcon ICON_PANEL_STATISTICS
-      = new ImageIcon("src/gui/images/statistics_panel.png");
+      = new ImageIcon("src/settings/images/statistics_panel.png");
 }

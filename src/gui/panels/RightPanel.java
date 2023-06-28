@@ -1,8 +1,8 @@
 package gui.panels;
 
-import gui.EnableEditDelete;
 import gui.MainFrame;
-import gui.Refresh;
+import gui.interfaces.EnableEditDelete;
+import gui.interfaces.Refresh;
 import gui.tables.TableData;
 import gui.toolbars.AbstractToolBar;
 import javax.swing.Box;
@@ -12,6 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ListSelectionModel;
+import lombok.Setter;
 import settings.Text;
 import settings.styles.ConstantStyle;
 import settings.styles.FontStyle;
@@ -19,6 +20,7 @@ import settings.styles.FontStyle;
 /**
  * The RightPanel class represents a panel on the right side of the main frame.
  */
+@Setter
 public abstract class RightPanel extends AbstractPanel {
 
   protected TableData td;
@@ -41,10 +43,6 @@ public abstract class RightPanel extends AbstractPanel {
 
   public RightPanel(MainFrame frame, TableData td, String title, ImageIcon icon) {
     this(frame, td, title, icon, new JPanel[]{});
-  }
-
-  protected void setPanels(JPanel[] panels) {
-    this.panels = panels;
   }
 
   @Override

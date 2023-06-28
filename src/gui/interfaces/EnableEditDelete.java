@@ -1,4 +1,4 @@
-package gui;
+package gui.interfaces;
 
 /**
  * The EnableEditDelete interface defines methods for enabling or disabling

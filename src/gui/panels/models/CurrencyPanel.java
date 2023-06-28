@@ -1,6 +1,7 @@
-package gui.panels;
+package gui.panels.models;
 
 import gui.MainFrame;
+import gui.panels.RightPanel;
 import gui.tables.CurrencyTableData;
 import gui.toolbars.FunctionsToolBar;
 import settings.styles.ImageIconStyle;

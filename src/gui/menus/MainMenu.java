@@ -1,8 +1,8 @@
 package gui.menus;
 
-import gui.EnableEditDelete;
 import gui.MainFrame;
-import gui.Refresh;
+import gui.interfaces.EnableEditDelete;
+import gui.interfaces.Refresh;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;

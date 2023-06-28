@@ -1,7 +1,8 @@
-package gui.dialogs;
+package gui.dialogs.editings;
 
 import datastorages.SaveData;
 import gui.MainFrame;
+import gui.dialogs.CommonComboBox;
 import javax.swing.JTextField;
 import models.Account;
 import models.Common;

@@ -1,8 +1,9 @@
-package gui.dialogs;
+package gui.dialogs.editings;
 
 import datastorages.SaveData;
 import gui.MainDatePicker;
 import gui.MainFrame;
+import gui.dialogs.CommonComboBox;
 import java.util.Date;
 import javax.swing.JTextField;
 import models.Account;

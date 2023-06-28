@@ -1,9 +1,11 @@
 package gui;
 
+import gui.interfaces.Refresh;
 import gui.menus.MainMenu;
 import gui.panels.LeftPanel;
 import gui.panels.RightPanel;
-import gui.panels.TransferPanel;
+import gui.panels.StatisticsPanel;
+import gui.panels.models.TransferPanel;
 import gui.toolbars.MainToolBar;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -57,7 +59,7 @@ public final class MainFrame extends JFrame implements Refresh {
     leftPanel = new LeftPanel(this);
     add(leftPanel, constraints);
 
-    setRightPanel(new TransferPanel(this));
+    setRightPanel(new StatisticsPanel(this));
 
     pack();
     setLocationRelativeTo(null);

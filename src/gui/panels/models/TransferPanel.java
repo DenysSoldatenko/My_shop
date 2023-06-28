@@ -1,6 +1,8 @@
-package gui.panels;
+package gui.panels.models;
 
 import gui.MainFrame;
+import gui.panels.FilterPanel;
+import gui.panels.RightPanel;
 import gui.tables.TransferTableData;
 import gui.toolbars.FunctionsToolBar;
 import javax.swing.JPanel;

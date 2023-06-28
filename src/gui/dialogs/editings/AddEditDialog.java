@@ -1,4 +1,4 @@
-package gui.dialogs;
+package gui.dialogs.editings;
 
 import gui.MainButton;
 import gui.MainFrame;

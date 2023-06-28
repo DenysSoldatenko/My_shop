@@ -18,7 +18,7 @@ import org.ini4j.Wini;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class Settings {
 
-  public static final File FONT_ROBOTO_LIGHT = new File("src/gui/fonts/Roboto-Light.ttf");
+  public static final File FONT_ROBOTO_LIGHT = new File("src/settings/fonts/Roboto-Light.ttf");
   public static final File SAVE_DIRECTORY = new File("src/configurations/");
   public static final String SAVE_FILE_EXTENSION = "json";
   public static final String FORMAT_AMOUNT = "#,##0.00";

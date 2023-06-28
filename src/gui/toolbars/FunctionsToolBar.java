@@ -1,7 +1,7 @@
 package gui.toolbars;
 
-import gui.EnableEditDelete;
 import gui.MainButton;
+import gui.interfaces.EnableEditDelete;
 import settings.HandlerCode;
 import settings.Text;
 import settings.styles.ImageIconStyle;

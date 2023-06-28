@@ -1,6 +1,6 @@
 package gui.tables;
 
-import gui.Refresh;
+import gui.interfaces.Refresh;
 import gui.menus.TablePopupMenu;
 import gui.renders.MainTableCellRenderer;
 import gui.renders.TableHeaderIconRenderer;

@@ -19,5 +19,5 @@ public class DimensionStyle {
   public static final Dimension DIMENSION_TABLE_SHOW_SIZE
       = new Dimension(850, 450);
   public static final Dimension DIMENSION_CHART
-      = new Dimension(868, 550);
+      = new Dimension(600, 340);
 }

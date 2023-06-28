@@ -1,6 +1,6 @@
 package gui.tables.models;
 
-import gui.Refresh;
+import gui.interfaces.Refresh;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

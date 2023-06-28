@@ -1,6 +1,6 @@
 package gui.menus;
 
-import gui.Refresh;
+import gui.interfaces.Refresh;
 import javax.swing.JMenuItem;
 import javax.swing.JPopupMenu;
 import settings.HandlerCode;

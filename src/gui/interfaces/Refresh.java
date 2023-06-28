@@ -1,4 +1,4 @@
-package gui;
+package gui.interfaces;
 
 /**
  * The Refresh interface represents an entity that can be refreshed.

@@ -1,7 +1,7 @@
 package gui.toolbars;
 
 import gui.MainButton;
-import gui.Refresh;
+import gui.interfaces.Refresh;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;

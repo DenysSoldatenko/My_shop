@@ -1,7 +1,7 @@
 package gui.panels;
 
 import gui.MainFrame;
-import gui.Refresh;
+import gui.interfaces.Refresh;
 import javax.swing.JPanel;
 
 /**
