@@ -66,5 +66,4 @@ public class TransactionAddEditDialog extends AddEditDialog {
       throw new ModelException(ModelException.AMOUNT_FORMAT);
     }
   }
-
 }

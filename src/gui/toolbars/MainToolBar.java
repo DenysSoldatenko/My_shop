@@ -6,6 +6,9 @@ import settings.Text;
 import settings.styles.BorderStyle;
 import settings.styles.ImageIconStyle;
 
+/**
+ * The MainToolBar class represents the main toolbar in the GUI.
+ */
 public final class MainToolBar extends AbstractToolBar {
 
   public MainToolBar() {

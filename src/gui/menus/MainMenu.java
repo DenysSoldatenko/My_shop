@@ -14,6 +14,9 @@ import settings.HandlerCode;
 import settings.Text;
 import settings.styles.ImageIconStyle;
 
+/**
+ * The MainMenu class represents the main menu bar of the application.
+ */
 public class MainMenu extends JMenuBar implements Refresh, EnableEditDelete {
 
   private JMenuItem menuEdit;
@@ -111,5 +114,4 @@ public class MainMenu extends JMenuBar implements Refresh, EnableEditDelete {
     removeAll();
     init();
   }
-
 }

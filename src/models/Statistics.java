@@ -87,4 +87,3 @@ public final class Statistics {
      Math.round(value * ROUNDING_FACTOR) / ROUNDING_FACTOR;
   }
 }
-

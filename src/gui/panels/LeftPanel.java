@@ -20,8 +20,7 @@ import settings.styles.FontStyle;
 import settings.styles.ImageIconStyle;
 
 /**
- * The LeftPanel class represents a panel on the left side of the application's main frame.
- * It displays balance currencies and their corresponding balances.
+ * The LeftPanel class represents a panel on the left side of the main frame.
  */
 public final class LeftPanel extends AbstractPanel {
 

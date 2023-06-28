@@ -69,9 +69,9 @@ public class ImageIconStyle {
       = new ImageIcon("src/gui/images/menu_help_about.png");
 
   public static final Icon ICON_MENU_POPUP_EDIT
-      = new ImageIcon("images/menu_popup_edit.png");
+      = new ImageIcon("src/gui/images/menu_popup_edit.png");
   public static final Icon ICON_MENU_POPUP_DELETE
-      = new ImageIcon("images/menu_popup_delete.png");
+      = new ImageIcon("src/gui/images/menu_popup_delete.png");
 
   public static final ImageIcon ICON_TOOLBAR_OVERVIEW
       = new ImageIcon("src/gui/images/overview.png");

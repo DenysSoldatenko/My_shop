@@ -6,6 +6,9 @@ import settings.HandlerCode;
 import settings.Text;
 import settings.styles.ImageIconStyle;
 
+/**
+ * The FunctionsToolBar class represents a toolbar with common functions.
+ */
 public final class FunctionsToolBar extends AbstractToolBar implements EnableEditDelete {
 
   private MainButton editButton;
@@ -31,6 +34,5 @@ public final class FunctionsToolBar extends AbstractToolBar implements EnableEdi
     editButton.setEnabled(enable);
     deleteButton.setEnabled(enable);
   }
-
 }
 

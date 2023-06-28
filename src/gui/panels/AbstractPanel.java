@@ -4,6 +4,9 @@ import gui.MainFrame;
 import gui.Refresh;
 import javax.swing.JPanel;
 
+/**
+ * The AbstractPanel class represents a base panel for GUI panels in the application.
+ */
 public abstract class AbstractPanel extends JPanel implements Refresh {
 
   protected final MainFrame frame;

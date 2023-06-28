@@ -67,5 +67,4 @@ public class MainFileChooser extends JFileChooser {
   public int save() {
     return super.showSaveDialog(frame);
   }
-
 }

@@ -6,11 +6,12 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
+/**
+ * The AbstractToolBar class represents an abstract toolbar in the GUI.
+ */
 public abstract class AbstractToolBar extends JPanel implements Refresh {
 
-  public AbstractToolBar() {
-
-  }
+  public AbstractToolBar() { }
 
   protected abstract void init();
 
@@ -32,7 +33,6 @@ public abstract class AbstractToolBar extends JPanel implements Refresh {
     removeAll();
     init();
   }
-
 }
 
 
