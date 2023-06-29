@@ -28,6 +28,16 @@ public abstract class RightPanel extends AbstractPanel {
   private ImageIcon icon;
   private JPanel[] panels;
 
+  /**
+   * Constructs a RightPanel with the specified MainFrame,
+   * TableData, title, icon, and panels.
+   *
+   * @param frame   the MainFrame to associate with the panel
+   * @param td      the TableData to display in the panel
+   * @param title   the title of the panel
+   * @param icon    the icon for the panel
+   * @param panels  an array of JPanels to add to the panel
+   */
   public RightPanel(MainFrame frame, TableData td, String title, ImageIcon icon, JPanel[] panels) {
     super(frame);
     this.td = td;

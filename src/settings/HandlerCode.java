@@ -21,7 +21,7 @@ public final class HandlerCode {
   public static final String MENU_VIEW_TRANSFERS = "MENU_VIEW_TRANSFERS";
   public static final String MENU_VIEW_CURRENCIES = "MENU_VIEW_CURRENCIES";
   public static final String MENU_VIEW_STATISTICS = "MENU_VIEW_STATISTICS";
-  public static final String MENU_SETTINGS_LANGUAGE_RUSSIAN = "MENU_SETTINGS_LANGUAGE_RUSSIAN";
+  public static final String MENU_SETTINGS_LANGUAGE_UKRAINIAN = "MENU_SETTINGS_LANGUAGE_UKRAINIAN";
   public static final String MENU_SETTINGS_LANGUAGE_ENGLISH = "MENU_SETTINGS_LANGUAGE_ENGLISH";
   public static final String MENU_HELP_ABOUT = "MENU_HELP_ABOUT";
 

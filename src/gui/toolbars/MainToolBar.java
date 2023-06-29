@@ -1,5 +1,6 @@
 package gui.toolbars;
 
+import gui.handlers.MainToolBarHandler;
 import javax.swing.Box;
 import settings.HandlerCode;
 import settings.Text;
@@ -11,9 +12,8 @@ import settings.styles.ImageIconStyle;
  */
 public final class MainToolBar extends AbstractToolBar {
 
-  public MainToolBar() {
-    super();
-    setBorder(BorderStyle.BORDER_MAIN_TOOLBAR);
+  public MainToolBar(MainToolBarHandler handler) {
+    super(BorderStyle.BORDER_MAIN_TOOLBAR, handler);
     init();
   }
 

@@ -24,7 +24,7 @@ import settings.exceptions.ModelException;
 public class Main {
   public static void main(String[] args) {
     init();
-    MainFrame mainFrame = new MainFrame();
+    new MainFrame();
   }
 
   private static void init() {

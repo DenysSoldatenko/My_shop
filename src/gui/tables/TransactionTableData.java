@@ -1,5 +1,6 @@
 package gui.tables;
 
+import gui.handlers.FunctionsHandler;
 import gui.renders.MainTableCellRenderer;
 import gui.tables.models.TransactionTableModel;
 import java.awt.Component;
@@ -16,19 +17,21 @@ public class TransactionTableData extends TableData {
 
   private static final String[] columns = new String[]{
     "DATE", "ACCOUNT",
-    "ARTICLE", "AMOUNT", "NOTICE"};
+    "ARTICLE", "AMOUNT", "NOTICE"
+  };
   private static final ImageIcon[] icons = new ImageIcon[]{
     ImageIconStyle.ICON_DATE, ImageIconStyle.ICON_ACCOUNT,
     ImageIconStyle.ICON_ARTICLE, ImageIconStyle.ICON_AMOUNT,
-    ImageIconStyle.ICON_NOTICE};
+    ImageIconStyle.ICON_NOTICE
+  };
 
-  public TransactionTableData() {
-    super(new TransactionTableModel(columns), columns, icons);
+  public TransactionTableData(FunctionsHandler handler) {
+    super(new TransactionTableModel(columns), handler, columns, icons);
     init();
   }
 
-  public TransactionTableData(int count) {
-    super(new TransactionTableModel(columns, count), columns, icons);
+  public TransactionTableData(FunctionsHandler handler, int count) {
+    super(new TransactionTableModel(columns, count), handler, columns, icons);
     init();
   }
 

@@ -37,6 +37,7 @@ public final class Settings {
       = new File("src/configurations/settings.ini");
   private static File FILE_SAVE
       = new File("src/configurations/default.json");
+  private static String LANGUAGE = "uk";
 
   /**
    * Initializes the settings by reading from the settings.ini file.
@@ -45,11 +46,14 @@ public final class Settings {
   public static void init() {
     try {
       Ini ini = new Ini(FILE_SETTINGS);
-      Preferences preferences = new IniPreferences(ini);
-      String file = preferences.node("Settings")
-          .get("FILE_SAVE", null);
+      Preferences prefs = new IniPreferences(ini);
+      String file = prefs.node("Settings").get("FILE_SAVE", null);
       if (file != null) {
         FILE_SAVE = new File(file);
+      }
+      String language = prefs.node("Settings").get("LANGUAGE", null);
+      if (language != null) {
+        LANGUAGE = language;
       }
       setLocale();
     } catch (IOException ex) {
@@ -61,13 +65,32 @@ public final class Settings {
     return FILE_SAVE;
   }
 
-  public static void setFileSave(final File fileSave) {
+  public static void setFileSave(File fileSave) {
     FILE_SAVE = fileSave;
     save();
   }
 
+  public static String getLanguage() {
+    return LANGUAGE;
+  }
+
+  /**
+   * Sets the language for the program.
+   *
+   * @param language The language to set.
+   */
+  public static void setLanguage(String language) {
+    LANGUAGE = language;
+    setLocale();
+    save();
+  }
+
   private static void setLocale() {
-    Locale.setDefault(new Locale("uk"));
+    if (LANGUAGE.equals("uk")) {
+      Locale.setDefault(new Locale("uk"));
+    } else {
+      Locale.setDefault(new Locale("en"));
+    }
   }
 
   private static void save() {

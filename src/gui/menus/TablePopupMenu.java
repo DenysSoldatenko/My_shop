@@ -1,5 +1,6 @@
 package gui.menus;
 
+import gui.handlers.FunctionsHandler;
 import gui.interfaces.Refresh;
 import javax.swing.JMenuItem;
 import javax.swing.JPopupMenu;
@@ -13,8 +14,16 @@ import settings.styles.ImageIconStyle;
  */
 public class TablePopupMenu extends JPopupMenu implements Refresh {
 
-  public TablePopupMenu() {
+  private final FunctionsHandler handler;
+
+  /**
+   * Constructs a TablePopupMenu with the specified FunctionsHandler.
+   *
+   * @param handler the FunctionsHandler
+   */
+  public TablePopupMenu(FunctionsHandler handler) {
     super();
+    this.handler = handler;
     init();
   }
 
@@ -29,6 +38,9 @@ public class TablePopupMenu extends JPopupMenu implements Refresh {
 
     editItem.setActionCommand(HandlerCode.EDIT);
     deleteItem.setActionCommand(HandlerCode.DELETE);
+
+    editItem.addActionListener(handler);
+    deleteItem.addActionListener(handler);
 
     editItem.setIcon(ImageIconStyle.ICON_MENU_POPUP_EDIT);
     deleteItem.setIcon(ImageIconStyle.ICON_MENU_POPUP_DELETE);

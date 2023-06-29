@@ -1,5 +1,6 @@
 package gui.tables;
 
+import gui.handlers.FunctionsHandler;
 import gui.renders.MainTableCellRenderer;
 import gui.tables.models.CurrencyTableModel;
 import java.awt.Component;
@@ -21,8 +22,8 @@ public class CurrencyTableData extends TableData {
     ImageIconStyle.ICON_RATE, ImageIconStyle.ICON_ON, ImageIconStyle.ICON_BASE
   };
 
-  public CurrencyTableData() {
-    super(new CurrencyTableModel(columns), columns, icons);
+  public CurrencyTableData(FunctionsHandler handler) {
+    super(new CurrencyTableModel(columns), handler, columns, icons);
     init();
   }
 

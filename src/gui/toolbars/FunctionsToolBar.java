@@ -1,9 +1,11 @@
 package gui.toolbars;
 
 import gui.MainButton;
+import gui.handlers.Handler;
 import gui.interfaces.EnableEditDelete;
 import settings.HandlerCode;
 import settings.Text;
+import settings.styles.BorderStyle;
 import settings.styles.ImageIconStyle;
 
 /**
@@ -14,8 +16,8 @@ public final class FunctionsToolBar extends AbstractToolBar implements EnableEdi
   private MainButton editButton;
   private MainButton deleteButton;
 
-  public FunctionsToolBar() {
-    super();
+  public FunctionsToolBar(Handler handler) {
+    super(BorderStyle.BORDER_FUNCTIONS_TOOLBAR, handler);
     init();
   }
 

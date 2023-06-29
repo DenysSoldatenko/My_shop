@@ -22,7 +22,7 @@
     "currency" : {
       "title" : "Євро",
       "code" : "EUR",
-      "rate" : 40.1852,
+      "rate" : 40.0225,
       "on" : false,
       "base" : false
     },
@@ -1238,7 +1238,7 @@
   }, {
     "title" : "Євро",
     "code" : "EUR",
-    "rate" : 40.1852,
+    "rate" : 40.0225,
     "on" : false,
     "base" : false
   } ]

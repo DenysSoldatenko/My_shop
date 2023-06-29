@@ -17,7 +17,7 @@ import settings.exceptions.ModelException;
 
 /**
  * The SaveData class represents the data storage for the application.
- * It holds lists of articles, currencies,accounts, transactions, and transfers.
+ * It holds lists of articles, currencies, accounts, transactions, and transfers.
  * It provides methods for managing and manipulating the data.
  */
 @Getter
@@ -40,7 +40,12 @@ public final class SaveData {
     this.filter = new Filter();
   }
 
-  private void load() {
+  /**
+   * Loads the data for the StatisticsPanel.
+   * It loads the saved data, sorts the data,
+   * and calculates the amount for each account.
+   */
+  public void load() {
     SaveLoad.load(this);
     sort();
     for (Account a : accounts) {
@@ -240,7 +245,7 @@ public final class SaveData {
    * @throws ModelException if the object already exists.
    */
   public void add(Common c) throws ModelException {
-    List ref = getRef(c);
+    List<Common> ref = (List<Common>) getRef(c);
     if (ref.contains(c)) {
       throw new ModelException(ModelException.IS_EXISTS);
     }
@@ -258,7 +263,7 @@ public final class SaveData {
    * @throws ModelException if the new object already exists.
    */
   public void edit(Common oldC, Common newC) throws ModelException {
-    List ref = getRef(oldC);
+    List<Common> ref = (List<Common>) getRef(oldC);
     if (ref.contains(newC) && oldC != ref.get(ref.indexOf(newC))) {
       throw new ModelException(ModelException.IS_EXISTS);
     }
@@ -293,5 +298,18 @@ public final class SaveData {
       return transfers;
     }
     return null;
+  }
+
+  /**
+   * Clears all the data in the StatisticsPanel.
+   * It clears the lists of articles, currencies,
+   * accounts, transactions, and transfers.
+   */
+  public void clear() {
+    articles.clear();
+    currencies.clear();
+    accounts.clear();
+    transactions.clear();
+    transfers.clear();
   }
 }

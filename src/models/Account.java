@@ -53,7 +53,7 @@ public final class Account extends Common {
 
   /**
    * Sets the amount of the account based on the provided list of transactions and transfers.
-   * The amount is calculated by summing the amounts of the transactions and adjusting for transfers
+   * The amount is calculated by summing the number of the transactions and adjusting for transfers
    * where the account is involved.
    *
    * @param transactions the list of transactions

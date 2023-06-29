@@ -1,5 +1,6 @@
 package gui.tables;
 
+import gui.handlers.FunctionsHandler;
 import gui.renders.MainTableCellRenderer;
 import gui.tables.models.TransferTableModel;
 import java.awt.Color;
@@ -23,8 +24,8 @@ public class TransferTableData extends TableData {
     ImageIconStyle.ICON_AMOUNT, ImageIconStyle.ICON_NOTICE
   };
 
-  public TransferTableData() {
-    super(new TransferTableModel(columns), columns, icons);
+  public TransferTableData(FunctionsHandler handler) {
+    super(new TransferTableModel(columns), handler, columns, icons);
     init();
   }
 

@@ -1,16 +1,19 @@
 package gui;
 
+import gui.handlers.MainToolBarHandler;
+import gui.handlers.MainWindowHandler;
 import gui.interfaces.Refresh;
 import gui.menus.MainMenu;
 import gui.panels.LeftPanel;
 import gui.panels.RightPanel;
-import gui.panels.StatisticsPanel;
-import gui.panels.models.TransferPanel;
+import gui.panels.models.TransactionPanel;
 import gui.toolbars.MainToolBar;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
+import javax.swing.WindowConstants;
+import lombok.Getter;
 import settings.Text;
 import settings.styles.BorderStyle;
 import settings.styles.ImageIconStyle;
@@ -18,10 +21,11 @@ import settings.styles.ImageIconStyle;
 /**
  * The main frame of the GUI application.
  */
+@Getter
 public final class MainFrame extends JFrame implements Refresh {
 
   private final GridBagConstraints constraints;
-  private final MainMenu mb;
+  private final MainMenu menu;
   private final LeftPanel leftPanel;
   private RightPanel rightPanel;
   private final MainToolBar tb;
@@ -36,10 +40,10 @@ public final class MainFrame extends JFrame implements Refresh {
     setVisible(true);
     setResizable(false);
     setIconImage(ImageIconStyle.ICON_MAIN.getImage());
-    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 
-    mb = new MainMenu(this);
-    setJMenuBar(mb);
+    menu = new MainMenu(this);
+    setJMenuBar(menu);
 
     setLayout(new GridBagLayout());
 
@@ -49,7 +53,7 @@ public final class MainFrame extends JFrame implements Refresh {
     constraints.gridy = 0;
     constraints.gridwidth = 2;
 
-    tb = new MainToolBar();
+    tb = new MainToolBar(new MainToolBarHandler(this));
     add(tb, constraints);
 
     constraints.gridy = 1;
@@ -59,10 +63,12 @@ public final class MainFrame extends JFrame implements Refresh {
     leftPanel = new LeftPanel(this);
     add(leftPanel, constraints);
 
-    setRightPanel(new StatisticsPanel(this));
+    setRightPanel(new TransactionPanel(this));
 
     pack();
     setLocationRelativeTo(null);
+
+    addWindowListener(new MainWindowHandler());
   }
 
   @Override
@@ -70,6 +76,7 @@ public final class MainFrame extends JFrame implements Refresh {
     SwingUtilities.updateComponentTreeUI(this);
     tb.refresh();
     leftPanel.refresh();
+    rightPanel.refresh();
     pack();
   }
 
@@ -90,9 +97,5 @@ public final class MainFrame extends JFrame implements Refresh {
     panel.setBorder(BorderStyle.BORDER_PANEL);
     add(rightPanel, constraints);
     pack();
-  }
-
-  public MainMenu getMenu() {
-    return mb;
   }
 }

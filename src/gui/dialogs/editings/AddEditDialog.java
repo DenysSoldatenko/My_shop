@@ -2,6 +2,7 @@ package gui.dialogs.editings;
 
 import gui.MainButton;
 import gui.MainFrame;
+import gui.handlers.AddEditDialogHandler;
 import java.awt.BorderLayout;
 import java.util.Date;
 import java.util.LinkedHashMap;
@@ -51,6 +52,7 @@ public abstract class AddEditDialog extends JDialog {
   public AddEditDialog(MainFrame frame) {
     super(frame, Text.get("ADD"), true);
     this.frame = frame;
+    addWindowListener(new AddEditDialogHandler(frame, this));
     setResizable(false);
   }
 
@@ -106,6 +108,7 @@ public abstract class AddEditDialog extends JDialog {
           .getModel()).setValue((Date) values.get(key));
         }
       }
+      component.addKeyListener(new AddEditDialogHandler(frame, this));
       component.setAlignmentX(JComponent.LEFT_ALIGNMENT);
       add(label);
       add(Box.createVerticalStrut(ConstantStyle.PADDING_DIALOG));
@@ -115,14 +118,15 @@ public abstract class AddEditDialog extends JDialog {
   }
 
   private void addButtons() {
-    MainButton ok = new MainButton(Text.get("ADD"), ImageIconStyle.ICON_OK, null, HandlerCode.ADD);
+    MainButton ok = new MainButton(Text.get("ADD"), ImageIconStyle.ICON_OK,
+        new AddEditDialogHandler(frame, this), HandlerCode.ADD);
     if (!isAdd()) {
       ok.setActionCommand(HandlerCode.EDIT);
       ok.setText(Text.get("EDIT"));
     }
 
     MainButton cancel = new MainButton(Text.get("CANCEL"), ImageIconStyle.ICON_CANCEL,
-        null, HandlerCode.CANCEL);
+        new AddEditDialogHandler(frame, this), HandlerCode.CANCEL);
 
     JPanel panelButtons = new JPanel();
     panelButtons.setLayout(new BorderLayout());

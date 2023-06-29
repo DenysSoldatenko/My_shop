@@ -24,6 +24,13 @@ public final class Chart {
   private final String title;
   private final String currencyTitle;
 
+  /**
+   * Constructs a Chart object.
+   *
+   * @param data          the data for the chart
+   * @param title         the title of the chart
+   * @param currencyTitle the title of the currency
+   */
   public Chart(HashMap<String, Double> data, String title, String currencyTitle) {
     setData(data);
     this.title = Text.get(title);
@@ -37,6 +44,11 @@ public final class Chart {
     }
   }
 
+  /**
+   * Returns a JPanel containing the pie chart visualization.
+   *
+   * @return the JPanel containing the pie chart
+   */
   public JPanel getPanel() {
     JFreeChart chart = ChartFactory.createPieChart3D(title, dataset, true, true, false);
     PiePlot plot = (PiePlot) chart.getPlot();

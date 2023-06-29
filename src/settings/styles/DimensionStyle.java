@@ -17,7 +17,7 @@ public class DimensionStyle {
   public static final Dimension DIMENSION_PADDING_BALANCE
       = new Dimension(10, 0);
   public static final Dimension DIMENSION_TABLE_SHOW_SIZE
-      = new Dimension(850, 450);
+      = new Dimension(850, 350);
   public static final Dimension DIMENSION_CHART
-      = new Dimension(600, 340);
+      = new Dimension(868, 350);
 }

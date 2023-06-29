@@ -2,7 +2,6 @@ package settings.exceptions;
 
 import java.util.HashMap;
 import java.util.Map;
-import settings.Text;
 
 /**
  * The ModelException class represents an exception specific to the application's models.
@@ -23,26 +22,16 @@ public class ModelException extends Exception {
       = new HashMap<>();
 
   static {
-    ERROR_MESSAGES.put(TITLE_EMPTY,
-        Text.get("ERROR_TITLE_EMPTY"));
-    ERROR_MESSAGES.put(IS_EXISTS,
-        Text.get("ERROR_IS_EXISTS"));
-    ERROR_MESSAGES.put(DATE_FORMAT,
-        Text.get("ERROR_DATE_FORMAT"));
-    ERROR_MESSAGES.put(CODE_EMPTY,
-        Text.get("ERROR_CODE_EMPTY"));
-    ERROR_MESSAGES.put(CURRENCY_EMPTY,
-        Text.get("ERROR_CURRENCY_EMPTY"));
-    ERROR_MESSAGES.put(ARTICLE_EMPTY,
-        Text.get("ERROR_ARTICLE_EMPTY"));
-    ERROR_MESSAGES.put(ACCOUNT_EMPTY,
-        Text.get("ERROR_ACCOUNT_EMPTY"));
-    ERROR_MESSAGES.put(RATE_INCORRECT,
-        Text.get("ERROR_RATE_INCORRECT"));
-    ERROR_MESSAGES.put(AMOUNT_FORMAT,
-        Text.get("ERROR_AMOUNT_FORMAT"));
-    ERROR_MESSAGES.put(NO_BASE_CURRENCY,
-        Text.get("ERROR_NO_BASE_CURRENCY"));
+    ERROR_MESSAGES.put(TITLE_EMPTY, "ERROR_TITLE_EMPTY");
+    ERROR_MESSAGES.put(IS_EXISTS, "ERROR_IS_EXISTS");
+    ERROR_MESSAGES.put(DATE_FORMAT, "ERROR_DATE_FORMAT");
+    ERROR_MESSAGES.put(CODE_EMPTY, "ERROR_CODE_EMPTY");
+    ERROR_MESSAGES.put(CURRENCY_EMPTY, "ERROR_CURRENCY_EMPTY");
+    ERROR_MESSAGES.put(ARTICLE_EMPTY, "ERROR_ARTICLE_EMPTY");
+    ERROR_MESSAGES.put(ACCOUNT_EMPTY, "ERROR_ACCOUNT_EMPTY");
+    ERROR_MESSAGES.put(RATE_INCORRECT, "ERROR_RATE_INCORRECT");
+    ERROR_MESSAGES.put(AMOUNT_FORMAT, "ERROR_AMOUNT_FORMAT");
+    ERROR_MESSAGES.put(NO_BASE_CURRENCY, "ERROR_NO_BASE_CURRENCY");
   }
 
   public ModelException(final int errorCode) {

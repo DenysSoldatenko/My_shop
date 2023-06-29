@@ -1,5 +1,6 @@
 package gui.tables;
 
+import gui.handlers.FunctionsHandler;
 import gui.interfaces.Refresh;
 import gui.menus.TablePopupMenu;
 import gui.renders.MainTableCellRenderer;
@@ -10,6 +11,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JPopupMenu;
 import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
+import lombok.Getter;
 import settings.Text;
 import settings.styles.ConstantStyle;
 import settings.styles.DimensionStyle;
@@ -18,17 +20,31 @@ import settings.styles.FontStyle;
 /**
  * The TableData class represents a table in the GUI.
  */
+@Getter
 public abstract class TableData extends JTable implements Refresh {
 
+  private final FunctionsHandler handler;
   private final String[] columns;
   private final ImageIcon[] icons;
-  private final TablePopupMenu popup;
 
-  public TableData(MainTableModel model, String[] columns, ImageIcon[] icons) {
+  /**
+   * Constructs a TableData with the specified model,
+   * handler, columns, and icons.
+   *
+   * @param model   the table model
+   * @param handler the function handler
+   * @param columns the column names
+   * @param icons   the icons for column headers
+   */
+  public TableData(MainTableModel model, FunctionsHandler handler,
+                   String[] columns, ImageIcon[] icons
+  ) {
     super(model);
+    this.handler = handler;
     this.columns = columns;
     this.icons = icons;
-    this.popup = new TablePopupMenu();
+    TablePopupMenu popup = new TablePopupMenu(handler);
+    setComponentPopupMenu(popup);
 
     getTableHeader().setFont(FontStyle.FONT_TABLE_HEADER);
     setFont(FontStyle.FONT_TABLE);
@@ -38,13 +54,15 @@ public abstract class TableData extends JTable implements Refresh {
     setPreferredScrollableViewportSize(DimensionStyle.DIMENSION_TABLE_SHOW_SIZE);
     setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
+    addMouseListener(handler);
+    addKeyListener(handler);
+
     for (int i = 0; i < columns.length; i++) {
       getColumn(Text.get(columns[i])).setHeaderRenderer(new TableHeaderIconRenderer(icons[i]));
     }
 
     MainTableCellRenderer renderer = new MainTableCellRenderer();
     setDefaultRenderer(String.class, renderer);
-    setComponentPopupMenu(popup);
   }
 
   @Override

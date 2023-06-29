@@ -1,5 +1,6 @@
 package gui.tables;
 
+import gui.handlers.FunctionsHandler;
 import gui.tables.models.AccountTableModel;
 import javax.swing.ImageIcon;
 import settings.styles.ImageIconStyle;
@@ -13,7 +14,7 @@ public class AccountTableData extends TableData {
   private static final ImageIcon[] icons = new ImageIcon[]{
     ImageIconStyle.ICON_TITLE, ImageIconStyle.ICON_AMOUNT};
 
-  public AccountTableData() {
-    super(new AccountTableModel(columns), columns, icons);
+  public AccountTableData(FunctionsHandler handler) {
+    super(new AccountTableModel(columns), handler, columns, icons);
   }
 }

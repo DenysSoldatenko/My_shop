@@ -59,6 +59,9 @@ public final class Currency extends Common {
     this.rate = rate;
     this.on = on;
     this.base = base;
+    if (this.base) {
+      this.on = true;
+    }
   }
 
   public double getRateByCurrency(final Currency currency) {
