@@ -5,9 +5,9 @@ The project in this repository serves as a practical implementation of the conce
 
 ### How to Use
 To use this project, follow these steps:
-2. Clone the repository to your local machine using the command:
-3. Open the project in your preferred Java development environment (IDE).
-4. Build and run the project within your development environment.
+1. Clone the repository to your local machine using the command:
+2. Open the project in your preferred Java development environment (IDE).
+3. Build and run the project within your development environment.
 
 Once the project is running, you can interact with the graphical user interface to perform various actions and explore its functionalities.
 
